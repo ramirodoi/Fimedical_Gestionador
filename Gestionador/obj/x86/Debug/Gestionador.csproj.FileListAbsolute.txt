@@ -17,3 +17,6 @@ C:\Users\rha\Documents\Visual Studio 2010\Projects\Gestionador\Gestionador\bin\D
 C:\Users\rha\Documents\Visual Studio 2010\Projects\Gestionador\Gestionador\bin\Debug\View\Clientes\Images\Coolsculpting.jpg
 C:\Users\rha\Documents\Visual Studio 2010\Projects\Gestionador\Gestionador\bin\Debug\View\Clientes\Images\Ultherapy.jpg
 C:\Users\rha\Documents\Visual Studio 2010\Projects\Gestionador\Gestionador\obj\x86\Debug\Gestionador.csprojResolveAssemblyReference.cache
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\Gestionador.exe.config
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.exe
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.pdb

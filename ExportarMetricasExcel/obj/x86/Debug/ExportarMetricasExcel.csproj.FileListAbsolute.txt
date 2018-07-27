@@ -1,0 +1,4 @@
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\ExportarMetricasExcel\bin\Debug\ExportarMetricasExcel.exe
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\ExportarMetricasExcel\bin\Debug\ExportarMetricasExcel.pdb
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\ExportarMetricasExcel\obj\x86\Debug\ExportarMetricasExcel.exe
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\ExportarMetricasExcel\obj\x86\Debug\ExportarMetricasExcel.pdb
