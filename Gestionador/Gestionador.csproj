@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF51B1D0-6BC3-4C5C-8EA2-37D7163E1C5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gestionador</RootNamespace>
+    <AssemblyName>Gestionador</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\ClientesController.cs" />
+    <Compile Include="FimedicalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FimedicalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Clientes.cs" />
+    <Compile Include="Model\Queries.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Clientes\Clientes_ABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_ABM.Designer.cs">
+      <DependentUpon>Clientes_ABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Alta.Designer.cs">
+      <DependentUpon>Clientes_Alta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Baja.Designer.cs">
+      <DependentUpon>Clientes_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Modificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Modificacion.Designer.cs">
+      <DependentUpon>Clientes_Modificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Modificacion_Editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Modificacion_Editar.Designer.cs">
+      <DependentUpon>Clientes_Modificacion_Editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Baja_Baja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Clientes\Clientes_Baja_Baja.Designer.cs">
+      <DependentUpon>Clientes_Baja_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Visual.cs" />
+    <Compile Include="View\Home\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Home\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mensajes.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\Clientes\Clientes_ABM.resx">
+      <DependentUpon>Clientes_ABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\Clientes_Alta.resx">
+      <DependentUpon>Clientes_Alta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\Clientes_Baja.resx">
+      <DependentUpon>Clientes_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\Clientes_Modificacion.resx">
+      <DependentUpon>Clientes_Modificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\Clientes_Modificacion_Editar.resx">
+      <DependentUpon>Clientes_Modificacion_Editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Clientes\Clientes_Baja_Baja.resx">
+      <DependentUpon>Clientes_Baja_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Home\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="FimedicalDataSet.xsc">
+      <DependentUpon>FimedicalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FimedicalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FimedicalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FimedicalDataSet.xss">
+      <DependentUpon>FimedicalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\HistoriaClinica\" />
+    <Folder Include="View\Tratamientos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="View\Clientes\Images\Candela.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Clientes\Images\Coolsculpting.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Clientes\Images\Ultherapy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Home\Images\Logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
