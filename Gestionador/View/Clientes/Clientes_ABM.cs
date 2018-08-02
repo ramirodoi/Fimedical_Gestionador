@@ -10,13 +10,13 @@ using Gestionador.View.Home;
 
 namespace Gestionador.View.Clientes
 {
-    public partial class clientes_ABM : Form
+    public partial class Clientes_ABM : Form
     {
         private Clientes_Alta clientesAlta = null;
         private Clientes_Baja clientesBaja = null;
         private Clientes_Modificacion clientesModificacion = null;
 
-        public clientes_ABM()
+        public Clientes_ABM()
         {
             InitializeComponent();
             this.CargaInicial();

@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ClientesController.cs" />
+    <Compile Include="Controller\HClinicaController.cs" />
     <Compile Include="FimedicalDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FimedicalDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Clientes.cs" />
+    <Compile Include="Model\HClinica.cs" />
     <Compile Include="Model\Queries.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +94,18 @@
     <Compile Include="View\Clientes\Clientes_Baja_Baja.Designer.cs">
       <DependentUpon>Clientes_Baja_Baja.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HistoriaClinica\HistoriaClinica_ABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HistoriaClinica\HistoriaClinica_ABM.Designer.cs">
+      <DependentUpon>HistoriaClinica_ABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HistoriaClinica\HistoriaClinica_Alta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HistoriaClinica\HistoriaClinica_Alta.Designer.cs">
+      <DependentUpon>HistoriaClinica_Alta.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Visual.cs" />
     <Compile Include="View\Home\Home.cs">
       <SubType>Form</SubType>
@@ -128,10 +142,17 @@
     <EmbeddedResource Include="View\Clientes\Clientes_Baja_Baja.resx">
       <DependentUpon>Clientes_Baja_Baja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\HistoriaClinica\HistoriaClinica_ABM.resx">
+      <DependentUpon>HistoriaClinica_ABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HistoriaClinica\HistoriaClinica_Alta.resx">
+      <DependentUpon>HistoriaClinica_Alta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Home\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="FimedicalDataSet.xsc">
       <DependentUpon>FimedicalDataSet.xsd</DependentUpon>
     </None>
@@ -154,7 +175,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\HistoriaClinica\" />
     <Folder Include="View\Tratamientos\" />
   </ItemGroup>
   <ItemGroup>

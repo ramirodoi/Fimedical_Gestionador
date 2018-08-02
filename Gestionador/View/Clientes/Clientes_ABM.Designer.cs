@@ -1,6 +1,6 @@
 ﻿namespace Gestionador.View.Clientes
 {
-    partial class clientes_ABM
+    partial class Clientes_ABM
     {
         /// <summary>
         /// Required designer variable.

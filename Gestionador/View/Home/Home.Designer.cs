@@ -30,7 +30,7 @@
         {
             this.btnClientes = new System.Windows.Forms.Button();
             this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnHClinica = new System.Windows.Forms.Button();
             this.btnTratamientos = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -57,16 +57,16 @@
             this.imgLogo.TabIndex = 1;
             this.imgLogo.TabStop = false;
             // 
-            // btnProductos
+            // btnHClinica
             // 
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Location = new System.Drawing.Point(43, 211);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(100, 25);
-            this.btnProductos.TabIndex = 1;
-            this.btnProductos.Text = "Productos";
-            this.btnProductos.UseVisualStyleBackColor = true;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            this.btnHClinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHClinica.Location = new System.Drawing.Point(43, 211);
+            this.btnHClinica.Name = "btnHClinica";
+            this.btnHClinica.Size = new System.Drawing.Size(100, 25);
+            this.btnHClinica.TabIndex = 1;
+            this.btnHClinica.Text = "H. Clínica";
+            this.btnHClinica.UseVisualStyleBackColor = true;
+            this.btnHClinica.Click += new System.EventHandler(this.btnHClinica_Click);
             // 
             // btnTratamientos
             // 
@@ -98,7 +98,7 @@
             this.ClientSize = new System.Drawing.Size(292, 273);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnTratamientos);
-            this.Controls.Add(this.btnProductos);
+            this.Controls.Add(this.btnHClinica);
             this.Controls.Add(this.imgLogo);
             this.Controls.Add(this.btnClientes);
             this.Name = "home";
@@ -113,7 +113,7 @@
 
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.PictureBox imgLogo;
-        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnHClinica;
         private System.Windows.Forms.Button btnTratamientos;
         private System.Windows.Forms.Button btnEmpleados;
     }

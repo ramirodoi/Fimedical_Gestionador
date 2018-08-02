@@ -9,12 +9,14 @@ using System.Windows.Forms;
 using Gestionador.View.Clientes;
 using System.IO;
 using System.Reflection;
+using Gestionador.View.HistoriaClinica;
 
 namespace Gestionador.View.Home
 {
     public partial class home : Form
     {
-        private clientes_ABM clientesABM = null;
+        private Clientes_ABM clientesABM = null;
+        private HistoriaClinica_ABM hClinicaABM = null;
 
         public home()
         {
@@ -25,7 +27,7 @@ namespace Gestionador.View.Home
         private void Clientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.clientesABM = new clientes_ABM();
+            this.clientesABM = new Clientes_ABM();
             this.clientesABM.StartPosition = FormStartPosition.CenterParent;
             this.clientesABM.Tag = this;
             this.clientesABM.Region = this.Region;
@@ -48,7 +50,7 @@ namespace Gestionador.View.Home
             this.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_WHITE, Visual.BOTON_COMPONENTE_WHITE, Visual.BOTON_COMPONENTE_WHITE);
 
             this.btnClientes.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
-            this.btnProductos.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
+            this.btnHClinica.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
             this.btnTratamientos.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
             this.btnEmpleados.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
 
@@ -56,9 +58,14 @@ namespace Gestionador.View.Home
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
 
-        private void btnProductos_Click(object sender, EventArgs e)
+        private void btnHClinica_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Próximamente!");
+            this.Hide();
+            this.hClinicaABM = new HistoriaClinica_ABM();
+            this.hClinicaABM.StartPosition = FormStartPosition.CenterParent;
+            this.hClinicaABM.Tag = this;
+            this.hClinicaABM.Region = this.Region;
+            this.hClinicaABM.ShowDialog(this);
         }
 
         private void btnTratamientos_Click(object sender, EventArgs e)

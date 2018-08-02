@@ -40,7 +40,7 @@ namespace Gestionador.View.Clientes
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            clientes_ABM clientesABM = (clientes_ABM)Tag;
+            Clientes_ABM clientesABM = (Clientes_ABM)Tag;
             clientesABM.StartPosition = FormStartPosition.CenterParent;
             clientesABM.Show();
             this.Close();
