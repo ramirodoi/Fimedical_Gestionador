@@ -12,7 +12,9 @@ namespace Gestionador.View
         static public int BOTON_COMPONENTE_RED = 55;
         static public int BOTON_COMPONENTE_GREEN = 195;
         static public int BOTON_COMPONENTE_BLUE = 235;
-        static public int BOTON_COMPONENTE_WHITE = 255;
+        static public int FONDO_COMPONENTE_RED = 255;
+        static public int FONDO_COMPONENTE_GREEN = 255;
+        static public int FONDO_COMPONENTE_BLUE = 255;
         static private string path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
         static public string IMAGEN_HOME = string.Format("{0}{1}", path, @"\View\Home\Images\Logo.jpg");
         static public string IMAGEN_ABM = string.Format("{0}{1}", path, @"\View\Clientes\Images\Coolsculpting.jpg");

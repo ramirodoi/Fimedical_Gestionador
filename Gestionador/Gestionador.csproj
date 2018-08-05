@@ -47,6 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ClientesController.cs" />
+    <Compile Include="Controller\MediosPagoController.cs" />
+    <Compile Include="Controller\ProductosController.cs" />
+    <Compile Include="Controller\TratamientosController.cs" />
+    <Compile Include="Controller\MedicasController.cs" />
     <Compile Include="Controller\HClinicaController.cs" />
     <Compile Include="FimedicalDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -54,6 +58,10 @@
       <DependentUpon>FimedicalDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Clientes.cs" />
+    <Compile Include="Model\MediosPago.cs" />
+    <Compile Include="Model\Productos.cs" />
+    <Compile Include="Model\Tratamientos.cs" />
+    <Compile Include="Model\Medicas.cs" />
     <Compile Include="Model\HClinica.cs" />
     <Compile Include="Model\Queries.cs" />
     <Compile Include="Program.cs" />
@@ -93,6 +101,13 @@
     </Compile>
     <Compile Include="View\Clientes\Clientes_Baja_Baja.Designer.cs">
       <DependentUpon>Clientes_Baja_Baja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Common\ComboboxItem.cs" />
+    <Compile Include="View\HistoriaClinica\HistoriaClinica_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HistoriaClinica\HistoriaClinica_Consulta.Designer.cs">
+      <DependentUpon>HistoriaClinica_Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="View\HistoriaClinica\HistoriaClinica_ABM.cs">
       <SubType>Form</SubType>
@@ -142,6 +157,9 @@
     <EmbeddedResource Include="View\Clientes\Clientes_Baja_Baja.resx">
       <DependentUpon>Clientes_Baja_Baja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\HistoriaClinica\HistoriaClinica_Consulta.resx">
+      <DependentUpon>HistoriaClinica_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HistoriaClinica\HistoriaClinica_ABM.resx">
       <DependentUpon>HistoriaClinica_ABM.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +193,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="View\Productos\" />
     <Folder Include="View\Tratamientos\" />
   </ItemGroup>
   <ItemGroup>

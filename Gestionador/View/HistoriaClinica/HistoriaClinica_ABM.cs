@@ -32,7 +32,7 @@ namespace Gestionador.View.HistoriaClinica
 
         private void CargarFormatoVentana()
         {
-            this.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_WHITE, Visual.BOTON_COMPONENTE_WHITE, Visual.BOTON_COMPONENTE_WHITE);
+            this.BackColor = Color.FromArgb(Visual.FONDO_COMPONENTE_RED, Visual.FONDO_COMPONENTE_GREEN, Visual.FONDO_COMPONENTE_BLUE);
 
             this.btnAlta.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
             //this.btnBaja.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);

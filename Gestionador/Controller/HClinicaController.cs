@@ -18,16 +18,22 @@ namespace Gestionador.Controller
             this.cli = new Clientes();
         }
 
-        //public bool GuardarHistoriaClinica()
-        //{
-        //    if (this.cli.ExisteCliente(dni))
-        //    {
-        //        return (false);
-        //    }
+        public void GuardarHistoriaClinica(int idPaciente, DataTable grilla)
+        {
+            if (idPaciente > 0 && (grilla != null && grilla.Rows.Count > 0))
+            {
+                this.hcli.GuardarHistoriaClinicaParaPaciente(idPaciente, DateTime.Now);
+                int idHistoriaClinica = this.hcli.ObtenerUltimaHistoriaClinica(idPaciente);
 
-        //    this.hcli.GuardarCliente(nombre, apellido, dni, fechaNacimiento, telefonoFijo, telefonoCelular, telefonoTrabajo, email, domicilio, localidad);
+                if (idHistoriaClinica > 0)
+                {
+                    var TratamientosList = grilla.AsEnumerable().Where(x => x["Tipo"].Equals("Tratamiento"));
+                    var ProductosList = grilla.AsEnumerable().Where(x => x["Tipo"].Equals("Producto"));
 
-        //    return (true);
-        //}
+                    this.hcli.GuardarHistoriaClinicaTratamiento(idHistoriaClinica, TratamientosList);
+                    this.hcli.GuardarHistoriaClinicaProductos(idHistoriaClinica, ProductosList);
+                }
+            }
+        }
     }
 }
