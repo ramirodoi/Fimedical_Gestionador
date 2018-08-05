@@ -12,7 +12,7 @@ namespace ExportarMetricasExcel
     class Program
     {
         private static string CONNECTION_STRING = @"Data Source=RHA-VIRTUAL\SQLEXPRESS;Initial Catalog=Fimedical;Integrated Security=True;";
-        private static string QUERY_EXPORTAR_CLIENTES = "SELECT * FROM dbo.Clientes";
+        private static string QUERY_EXPORTAR_PacienteS = "SELECT * FROM dbo.Pacientes";
 
         private static SqlConnection cnn;
         private static SqlDataAdapter dscmd;
@@ -29,7 +29,7 @@ namespace ExportarMetricasExcel
             CrearExcel();
 
             CrearPaginaPrincipal();
-            ExportarTablaClientes();
+            ExportarTablaPacientes();
 
             CerrarYGuardarExcel();
         }
@@ -64,12 +64,12 @@ namespace ExportarMetricasExcel
             xlWorkBook.Close();
         }
 
-        private static void ExportarTablaClientes()
+        private static void ExportarTablaPacientes()
         {
             cnn = new SqlConnection(CONNECTION_STRING);
             cnn.Open();
 
-            sql = QUERY_EXPORTAR_CLIENTES;
+            sql = QUERY_EXPORTAR_PacienteS;
             dscmd = new SqlDataAdapter(sql, cnn);
             ds = new DataSet();
             dscmd.Fill(ds);

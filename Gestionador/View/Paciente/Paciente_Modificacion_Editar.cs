@@ -9,19 +9,19 @@ using System.Windows.Forms;
 using Gestionador.Model;
 using Gestionador.Controller;
 
-namespace Gestionador.View.Clientes
+namespace Gestionador.View.Pacientes
 {
-    public partial class Clientes_Modificar_Editar : Form
+    public partial class Pacientes_Modificar_Editar : Form
     {
-        private int idCliente;
-        private ClientesController clienteController;
+        private int idPaciente;
+        private PacientesController PacienteController;
 
-        public Clientes_Modificar_Editar(int idCliente)
+        public Pacientes_Modificar_Editar(int idPaciente)
         {
             InitializeComponent();
-            this.idCliente = idCliente;
-            this.clienteController = new ClientesController();
-            this.CargarDatosCliente();
+            this.idPaciente = idPaciente;
+            this.PacienteController = new PacientesController();
+            this.CargarDatosPaciente();
             this.CargaInicial();
         }
 
@@ -33,9 +33,9 @@ namespace Gestionador.View.Clientes
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
 
-        private void CargarDatosCliente()
+        private void CargarDatosPaciente()
         {
-            DataSet ds = clienteController.ObtenerDatosClientePorId(this.idCliente);
+            DataSet ds = PacienteController.ObtenerDatosPacientePorId(this.idPaciente);
 
             if(ds != null && ds.Tables[0].Rows.Count > 0)
             {
@@ -59,7 +59,7 @@ namespace Gestionador.View.Clientes
 
         private void Volver_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show(Mensajes.CLIENTES_EDITAR_VOLVER, "Alerta", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show(Mensajes.PacienteS_EDITAR_VOLVER, "Alerta", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
@@ -69,9 +69,9 @@ namespace Gestionador.View.Clientes
 
         private void Volver()
         {
-            Clientes_Modificacion clientesModificacion = (Clientes_Modificacion)Tag;
-            clientesModificacion.StartPosition = FormStartPosition.CenterParent;
-            clientesModificacion.Show();
+            Paciente_Modificacion PacientesModificacion = (Paciente_Modificacion)Tag;
+            PacientesModificacion.StartPosition = FormStartPosition.CenterParent;
+            PacientesModificacion.Show();
             this.Close();
         }
 
@@ -79,21 +79,21 @@ namespace Gestionador.View.Clientes
         {
             if (this.PuedeGuardar())
             {
-                bool guardadoOk = this.clienteController.ActualizarCliente(this.idCliente, this.txtNombre.Text, this.txtApellido.Text, this.txtDni.Text, this.dpFechaNacimiento.Value, this.txtTelefonoFijo.Text, this.txtTelefonoCelular.Text, this.txtTelefonoTrabajo.Text, this.txtEmail.Text, this.txtDomicilio.Text, this.txtLocalidad.Text);
+                bool guardadoOk = this.PacienteController.ActualizarPaciente(this.idPaciente, this.txtNombre.Text, this.txtApellido.Text, this.txtDni.Text, this.dpFechaNacimiento.Value, this.txtTelefonoFijo.Text, this.txtTelefonoCelular.Text, this.txtTelefonoTrabajo.Text, this.txtEmail.Text, this.txtDomicilio.Text, this.txtLocalidad.Text);
 
                 if (guardadoOk)
                 {
-                    this.MostrarMensajeYVolver(Mensajes.CLIENTES_EDITAR_GUARDAR_OK);
+                    this.MostrarMensajeYVolver(Mensajes.PacienteS_EDITAR_GUARDAR_OK);
                 }
-                //TODO: Validar que el DNI modificado no coincida con el DNI de otro Cliente.
+                //TODO: Validar que el DNI modificado no coincida con el DNI de otro Paciente.
                 //else
                 //{
-                //    MessageBox.Show(Mensajes.CLIENTES_EDITAR_VALIDACION_GUARDAR_EXISTENTE);
+                //    MessageBox.Show(Mensajes.PacienteS_EDITAR_VALIDACION_GUARDAR_EXISTENTE);
                 //}
             }
             else
             {
-                MessageBox.Show(Mensajes.CLIENTES_EDITAR_VALIDACION_GUARDAR);
+                MessageBox.Show(Mensajes.PacienteS_EDITAR_VALIDACION_GUARDAR);
             }
         }
 

@@ -9,13 +9,13 @@ namespace Gestionador.Controller
 {
     class HClinicaController
     {
-        private Clientes cli = null;
+        private Pacientes cli = null;
         private HClinica hcli = null;
 
         public HClinicaController()
         {
             this.hcli = new HClinica();
-            this.cli = new Clientes();
+            this.cli = new Pacientes();
         }
 
         public void GuardarHistoriaClinica(int idPaciente, DataTable grilla)

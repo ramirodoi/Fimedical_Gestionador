@@ -9,18 +9,18 @@ using System.Windows.Forms;
 using Gestionador.Model;
 using Gestionador.Controller;
 
-namespace Gestionador.View.Clientes
+namespace Gestionador.View.Pacientes
 {
-    public partial class Clientes_Baja_Baja : Form
+    public partial class Paciente_Baja_Baja : Form
     {
-        private int idCliente;
-        private ClientesController clienteController;
+        private int idPaciente;
+        private PacientesController PacienteController;
 
-        public Clientes_Baja_Baja(int idCliente)
+        public Paciente_Baja_Baja(int idPaciente)
         {
             InitializeComponent();
-            this.idCliente = idCliente;
-            this.clienteController = new ClientesController();
+            this.idPaciente = idPaciente;
+            this.PacienteController = new PacientesController();
             this.CargaInicial();
         }
 
@@ -34,7 +34,7 @@ namespace Gestionador.View.Clientes
 
         private void Volver_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show(Mensajes.CLIENTES_BAJA_VOLVER, "Alerta", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show(Mensajes.Paciente_Baja_VOLVER, "Alerta", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
@@ -44,9 +44,9 @@ namespace Gestionador.View.Clientes
 
         private void Volver()
         {
-            Clientes_Baja clientesModificacion = (Clientes_Baja)Tag;
-            clientesModificacion.StartPosition = FormStartPosition.CenterParent;
-            clientesModificacion.Show();
+            Paciente_Baja PacientesModificacion = (Paciente_Baja)Tag;
+            PacientesModificacion.StartPosition = FormStartPosition.CenterParent;
+            PacientesModificacion.Show();
             this.Close();
         }
 
@@ -54,21 +54,21 @@ namespace Gestionador.View.Clientes
         {
             if (this.PuedeGuardar())
             {
-                var confirmResult = MessageBox.Show(Mensajes.CLIENTES_BAJA_GUARDAR, "Alerta", MessageBoxButtons.YesNo);
+                var confirmResult = MessageBox.Show(Mensajes.Paciente_Baja_GUARDAR, "Alerta", MessageBoxButtons.YesNo);
 
                 if (confirmResult == DialogResult.Yes)
                 {
-                    bool guardadoOk = this.clienteController.DarDeBajaCliente(this.idCliente, this.txtMotivo.Text);
+                    bool guardadoOk = this.PacienteController.DarDeBajaPaciente(this.idPaciente, this.txtMotivo.Text);
 
                     if (guardadoOk)
                     {
-                        this.MostrarMensajeYVolver(Mensajes.CLIENTES_BAJA_GUARDAR_OK);
+                        this.MostrarMensajeYVolver(Mensajes.Paciente_Baja_GUARDAR_OK);
                     }
                 }
             }
             else
             {
-                MessageBox.Show(Mensajes.CLIENTES_BAJA_VALIDACION_GUARDAR);
+                MessageBox.Show(Mensajes.Paciente_Baja_VALIDACION_GUARDAR);
             }
         }
 

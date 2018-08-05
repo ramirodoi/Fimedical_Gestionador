@@ -1,6 +1,6 @@
-﻿namespace Gestionador.View.Clientes
+﻿namespace Gestionador.View.Pacientes
 {
-    partial class Clientes_Alta
+    partial class Paciente_Alta
     {
         /// <summary>
         /// Required designer variable.
@@ -238,7 +238,7 @@
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 5;
             // 
-            // Clientes_Alta
+            // Paciente_Alta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,7 +265,7 @@
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnVolver);
-            this.Name = "Clientes_Alta";
+            this.Name = "Paciente_Alta";
             this.Text = "Alta";
             this.ResumeLayout(false);
             this.PerformLayout();

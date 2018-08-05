@@ -9,59 +9,59 @@ using System.Data.SqlClient;
 
 namespace Gestionador.Model
 {
-    class Clientes
+    class Pacientes
     {
         private SqlConnection connectionString = null;
         private SqlDataAdapter sqlDataAdapter = null;
         private SqlCommand cmd = null;
 
-        public Clientes()
+        public Pacientes()
         {
             this.connectionString = new SqlConnection(Queries.CONNECTION_STRING);
         }
 
-        public DataSet ObtenerDatosClientePorId(int idCliente)
+        public DataSet ObtenerDatosPacientePorId(int idPaciente)
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_CLIENTE_POR_ID, connectionString);
-            cmd.Parameters.AddWithValue("@p1", idCliente);
+            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_Paciente_POR_ID, connectionString);
+            cmd.Parameters.AddWithValue("@p1", idPaciente);
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
-            this.sqlDataAdapter.Fill(ds, "Clientes");
+            this.sqlDataAdapter.Fill(ds, "Pacientes");
 
             this.connectionString.Close();
 
             return(ds);
         }
 
-        public DataSet ObtenerDatosClientePorDni(string dni)
+        public DataSet ObtenerDatosPacientePorDni(string dni)
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_ID_CLIENTE_POR_DNI, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_ID_Paciente_POR_DNI, connectionString);
             cmd.Parameters.AddWithValue("@p1", dni);
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
-            this.sqlDataAdapter.Fill(ds, "Clientes");
+            this.sqlDataAdapter.Fill(ds, "Pacientes");
 
             this.connectionString.Close();
 
             return (ds);
         }
 
-        public int ObtenerIdClientePorDni(string dni)
+        public int ObtenerIdPacientePorDni(string dni)
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_ID_CLIENTE_POR_DNI, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_ID_Paciente_POR_DNI, connectionString);
             cmd.Parameters.AddWithValue("@p1", dni);
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
-            this.sqlDataAdapter.Fill(ds, "Clientes");
+            this.sqlDataAdapter.Fill(ds, "Pacientes");
 
             this.connectionString.Close();
 
@@ -73,27 +73,27 @@ namespace Gestionador.Model
             return ((int)ds.Tables[0].Rows[0][0]);
         }
 
-        public DataSet ObtenerTodosLosClientesActivos()
+        public DataSet ObtenerTodosLosPacientesActivos()
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_TODOS_LOS_CLIENTES_ACTIVOS, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_TODOS_LOS_PacienteS_ACTIVOS, connectionString);
 
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
-            this.sqlDataAdapter.Fill(ds, "Clientes");
+            this.sqlDataAdapter.Fill(ds, "Pacientes");
 
             this.connectionString.Close();
 
             return (ds);
         }
 
-        public DataSet ObtenerDatosClientePorConsulta(string nombre, string apellido, string dni)
+        public DataSet ObtenerDatosPacientePorConsulta(string nombre, string apellido, string dni)
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_CLIENTE_POR_CONSULTA, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_Paciente_POR_CONSULTA, connectionString);
 
             #region ValidaParametros
             if (nombre.Length > 0)
@@ -127,41 +127,41 @@ namespace Gestionador.Model
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
-            this.sqlDataAdapter.Fill(ds, "Clientes");
+            this.sqlDataAdapter.Fill(ds, "Pacientes");
 
             this.connectionString.Close();
 
             return (ds);
         }
 
-        //public DataSet ObtenerDatosCliente(Cliente cliente)
+        //public DataSet ObtenerDatosPaciente(Paciente Paciente)
         //{
         //    this.connectionString.Open();
 
-        //    this.cmd = new SqlCommand(Queries.OBTENER_DATOS_CLIENTE_POR_FILTROS, connectionString);
+        //    this.cmd = new SqlCommand(Queries.OBTENER_DATOS_Paciente_POR_FILTROS, connectionString);
 
         //    #region ValidaParametros
-        //    if (cliente.Nombre.Length > 0)
+        //    if (Paciente.Nombre.Length > 0)
         //    {
-        //        cmd.Parameters.AddWithValue("@p1", cliente.Nombre);
+        //        cmd.Parameters.AddWithValue("@p1", Paciente.Nombre);
         //    }
         //    else
         //    {
         //        cmd.Parameters.AddWithValue("@p1", DBNull.Value);
         //    }
 
-        //    if (cliente.Apellido.Length > 0)
+        //    if (Paciente.Apellido.Length > 0)
         //    {
-        //        cmd.Parameters.AddWithValue("@p2", cliente.Apellido);
+        //        cmd.Parameters.AddWithValue("@p2", Paciente.Apellido);
         //    }
         //    else
         //    {
         //        cmd.Parameters.AddWithValue("@p2", DBNull.Value);
         //    }
 
-        //    if (cliente.Dni.Length > 0)
+        //    if (Paciente.Dni.Length > 0)
         //    {
-        //        cmd.Parameters.AddWithValue("@p3", cliente.Dni);
+        //        cmd.Parameters.AddWithValue("@p3", Paciente.Dni);
         //    }
         //    else
         //    {
@@ -172,24 +172,24 @@ namespace Gestionador.Model
         //    this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
         //    DataSet ds = new DataSet();
-        //    this.sqlDataAdapter.Fill(ds, "Clientes");
+        //    this.sqlDataAdapter.Fill(ds, "Pacientes");
 
         //    this.connectionString.Close();
 
         //    return (ds);
         //}
 
-        public bool ExisteCliente(string identificador)
+        public bool ExistePaciente(string identificador)
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.EXISTE_CLIENTE_POR_IDENTIFICADOR, connectionString);
+            this.cmd = new SqlCommand(Queries.EXISTE_Paciente_POR_IDENTIFICADOR, connectionString);
             cmd.Parameters.AddWithValue("@p1", identificador);
             cmd.Parameters.AddWithValue("@p2", int.Parse(identificador));
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
             DataSet ds = new DataSet();
-            this.sqlDataAdapter.Fill(ds, "Clientes");
+            this.sqlDataAdapter.Fill(ds, "Pacientes");
 
             this.connectionString.Close();
 
@@ -201,12 +201,12 @@ namespace Gestionador.Model
             return (true);
         }
 
-        public void GuardarCliente(string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
+        public void GuardarPaciente(string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
         {
             
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.GUARDAR_ALTA_CLIENTE, connectionString);
+            this.cmd = new SqlCommand(Queries.GUARDAR_ALTA_Paciente, connectionString);
 
             #region ValidaParametros
             if (nombre != null && nombre.Length > 0)
@@ -306,16 +306,16 @@ namespace Gestionador.Model
             this.connectionString.Close();
         }
 
-        public void ActualizarCliente(int idCliente, string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
+        public void ActualizarPaciente(int idPaciente, string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.GUARDAR_EDITAR_CLIENTE, connectionString);
+            this.cmd = new SqlCommand(Queries.GUARDAR_EDITAR_Paciente, connectionString);
 
             #region ValidaParametros
-            if (idCliente > 0)
+            if (idPaciente > 0)
             {
-                cmd.Parameters.AddWithValue("@p11", idCliente);
+                cmd.Parameters.AddWithValue("@p11", idPaciente);
             }
             else
             {
@@ -419,16 +419,16 @@ namespace Gestionador.Model
             this.connectionString.Close();
         }
 
-        public void DarDeBajaCliente(int idCliente, string motivo)
+        public void DarDeBajaPaciente(int idPaciente, string motivo)
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.GUARDAR_BAJA_CLIENTE, connectionString);
+            this.cmd = new SqlCommand(Queries.GUARDAR_BAJA_Paciente, connectionString);
 
             #region ValidaParametros
-            if (idCliente > 0)
+            if (idPaciente > 0)
             {
-                cmd.Parameters.AddWithValue("@p1", idCliente);
+                cmd.Parameters.AddWithValue("@p1", idPaciente);
             }
             else
             {

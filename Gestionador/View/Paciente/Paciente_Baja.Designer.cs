@@ -1,6 +1,6 @@
-﻿namespace Gestionador.View.Clientes
+﻿namespace Gestionador.View.Pacientes
 {
-    partial class Clientes_Baja
+    partial class Paciente_Baja
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.dgClientes = new System.Windows.Forms.DataGridView();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgPacientes = new System.Windows.Forms.DataGridView();
+            this.idPacienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoCelularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fimedicalDataSet = new Gestionador.FimedicalDataSet();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -47,9 +47,9 @@
             this.lblDni = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.clientesTableAdapter = new Gestionador.FimedicalDataSetTableAdapters.ClientesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            this.PacientesTableAdapter = new Gestionador.FimedicalDataSetTableAdapters.PacientesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PacientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fimedicalDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,34 +64,34 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // dgClientes
+            // dgPacientes
             // 
-            this.dgClientes.AllowUserToAddRows = false;
-            this.dgClientes.AllowUserToDeleteRows = false;
-            this.dgClientes.AutoGenerateColumns = false;
-            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idClienteDataGridViewTextBoxColumn,
+            this.dgPacientes.AllowUserToAddRows = false;
+            this.dgPacientes.AllowUserToDeleteRows = false;
+            this.dgPacientes.AutoGenerateColumns = false;
+            this.dgPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPacienteDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.apellidoDataGridViewTextBoxColumn,
             this.dniDataGridViewTextBoxColumn,
             this.telefonoCelularDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.activo});
-            this.dgClientes.DataSource = this.clientesBindingSource;
-            this.dgClientes.Location = new System.Drawing.Point(12, 80);
-            this.dgClientes.Name = "dgClientes";
-            this.dgClientes.ReadOnly = true;
-            this.dgClientes.Size = new System.Drawing.Size(668, 150);
-            this.dgClientes.TabIndex = 8;
-            this.dgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellClick);
+            this.dgPacientes.DataSource = this.PacientesBindingSource;
+            this.dgPacientes.Location = new System.Drawing.Point(12, 80);
+            this.dgPacientes.Name = "dgPacientes";
+            this.dgPacientes.ReadOnly = true;
+            this.dgPacientes.Size = new System.Drawing.Size(668, 150);
+            this.dgPacientes.TabIndex = 8;
+            this.dgPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPacientes_CellClick);
             // 
-            // idClienteDataGridViewTextBoxColumn
+            // idPacienteDataGridViewTextBoxColumn
             // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "idCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "idCliente";
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPacienteDataGridViewTextBoxColumn.DataPropertyName = "idPaciente";
+            this.idPacienteDataGridViewTextBoxColumn.HeaderText = "idPaciente";
+            this.idPacienteDataGridViewTextBoxColumn.Name = "idPacienteDataGridViewTextBoxColumn";
+            this.idPacienteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -130,16 +130,16 @@
             // 
             // activo
             // 
-            this.activo.DataPropertyName = "idCliente";
+            this.activo.DataPropertyName = "idPaciente";
             this.activo.HeaderText = "activo";
             this.activo.Name = "activo";
             this.activo.ReadOnly = true;
             this.activo.Visible = false;
             // 
-            // clientesBindingSource
+            // PacientesBindingSource
             // 
-            this.clientesBindingSource.DataMember = "Clientes";
-            this.clientesBindingSource.DataSource = this.fimedicalDataSet;
+            this.PacientesBindingSource.DataMember = "Pacientes";
+            this.PacientesBindingSource.DataSource = this.fimedicalDataSet;
             // 
             // fimedicalDataSet
             // 
@@ -205,11 +205,11 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // clientesTableAdapter
+            // PacientesTableAdapter
             // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
+            this.PacientesTableAdapter.ClearBeforeFill = true;
             // 
-            // Clientes_Baja
+            // Paciente_Baja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,13 +221,13 @@
             this.Controls.Add(this.lblDni);
             this.Controls.Add(this.txtDni);
             this.Controls.Add(this.btnConsultar);
-            this.Controls.Add(this.dgClientes);
+            this.Controls.Add(this.dgPacientes);
             this.Controls.Add(this.btnVolver);
-            this.Name = "Clientes_Baja";
+            this.Name = "Paciente_Baja";
             this.Text = "Baja";
-            this.Load += new System.EventHandler(this.Clientes_Baja_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.Paciente_Baja_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPacientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PacientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fimedicalDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,7 +237,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.DataGridView dgClientes;
+        private System.Windows.Forms.DataGridView dgPacientes;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtNombre;
@@ -246,9 +246,9 @@
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Button btnConsultar;
         private FimedicalDataSet fimedicalDataSet;
-        private System.Windows.Forms.BindingSource clientesBindingSource;
-        private FimedicalDataSetTableAdapters.ClientesTableAdapter clientesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource PacientesBindingSource;
+        private FimedicalDataSetTableAdapters.PacientesTableAdapter PacientesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPacienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dniDataGridViewTextBoxColumn;

@@ -9,17 +9,17 @@ using System.Windows.Forms;
 using Gestionador.Model;
 using Gestionador.Controller;
 
-namespace Gestionador.View.Clientes
+namespace Gestionador.View.Pacientes
 {
-    public partial class Clientes_Alta : Form
+    public partial class Paciente_Alta : Form
     {
-        private ClientesController clientesController = null;
+        private PacientesController PacientesController = null;
 
-        public Clientes_Alta()
+        public Paciente_Alta()
         {
             InitializeComponent();
             this.CargaInicial();
-            this.clientesController = new ClientesController();
+            this.PacientesController = new PacientesController();
         }
 
         private void CargaInicial()
@@ -62,7 +62,7 @@ namespace Gestionador.View.Clientes
         {
             if (this.SePerderanLosCambios())
             {
-                var confirmResult = MessageBox.Show(Mensajes.CLIENTES_ALTA_VOLVER, "Alerta", MessageBoxButtons.YesNo);
+                var confirmResult = MessageBox.Show(Mensajes.Paciente_Alta_VOLVER, "Alerta", MessageBoxButtons.YesNo);
                 
                 if (confirmResult == DialogResult.Yes)
                 {
@@ -77,9 +77,9 @@ namespace Gestionador.View.Clientes
 
         private void Volver()
         {
-            Clientes_ABM clientesABM = (Clientes_ABM)Tag;
-            clientesABM.StartPosition = FormStartPosition.CenterParent;
-            clientesABM.Show();
+            Paciente_ABM PacientesABM = (Paciente_ABM)Tag;
+            PacientesABM.StartPosition = FormStartPosition.CenterParent;
+            PacientesABM.Show();
             this.Close();
         }
 
@@ -93,20 +93,20 @@ namespace Gestionador.View.Clientes
         {
             if (this.PuedeGuardar())
             {
-                bool guardadoOk = this.clientesController.GuardarCliente(this.txtNombre.Text, this.txtApellido.Text, this.txtDni.Text, this.dpFechaNacimiento.Value, this.txtTelefonoFijo.Text, this.txtTelefonoCelular.Text, this.txtTelefonoTrabajo.Text, this.txtEmail.Text, this.txtDomicilio.Text, this.txtLocalidad.Text);
+                bool guardadoOk = this.PacientesController.GuardarPaciente(this.txtNombre.Text, this.txtApellido.Text, this.txtDni.Text, this.dpFechaNacimiento.Value, this.txtTelefonoFijo.Text, this.txtTelefonoCelular.Text, this.txtTelefonoTrabajo.Text, this.txtEmail.Text, this.txtDomicilio.Text, this.txtLocalidad.Text);
 
                 if (guardadoOk)
                 {
-                    this.MostrarMensajeYVolver(Mensajes.CLIENTES_ALTA_GUARDAR_OK);
+                    this.MostrarMensajeYVolver(Mensajes.Paciente_Alta_GUARDAR_OK);
                 }
                 else
                 {
-                    MessageBox.Show(Mensajes.CLIENTES_ALTA_VALIDACION_GUARDAR_EXISTENTE);
+                    MessageBox.Show(Mensajes.Paciente_Alta_VALIDACION_GUARDAR_EXISTENTE);
                 }
             }
             else
             {
-                MessageBox.Show(Mensajes.CLIENTES_ALTA_VALIDACION_GUARDAR);
+                MessageBox.Show(Mensajes.Paciente_Alta_VALIDACION_GUARDAR);
             }
         }
 

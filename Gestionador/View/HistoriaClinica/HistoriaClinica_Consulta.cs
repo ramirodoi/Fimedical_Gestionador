@@ -13,7 +13,7 @@ namespace Gestionador.View.HistoriaClinica
 {
     public partial class HistoriaClinica_Consulta : Form
     {
-        private ClientesController clienteController = null;
+        private PacientesController PacienteController = null;
         private HClinicaController hClinicaController = null;
         private TratamientosController tratamientosController = null;
         private MedicasController medicasController = null;
@@ -24,7 +24,7 @@ namespace Gestionador.View.HistoriaClinica
         {
             InitializeComponent();
             
-            this.clienteController = new ClientesController();
+            this.PacienteController = new PacientesController();
             this.hClinicaController = new HClinicaController();
             this.tratamientosController = new TratamientosController();
             this.medicasController = new MedicasController();
@@ -63,7 +63,7 @@ namespace Gestionador.View.HistoriaClinica
         #region Carga Combos
         private void CargarComboPacientes()
         {
-            DataSet pacientes = this.clienteController.ObtenerTodosLosClientesActivos();
+            DataSet pacientes = this.PacienteController.ObtenerTodosLosPacientesActivos();
             ComboboxItem item = null;
 
             //Item vacio.
@@ -79,7 +79,7 @@ namespace Gestionador.View.HistoriaClinica
                 {
                     item = new ComboboxItem();
                     item.Text = string.Format("{0}, {1}", paciente["apellido"].ToString(), paciente["nombre"].ToString());
-                    item.Value = paciente["idCliente"].ToString();
+                    item.Value = paciente["idPaciente"].ToString();
 
                     cbPaciente.Items.Add(item);
                 }
@@ -186,7 +186,7 @@ namespace Gestionador.View.HistoriaClinica
         {
             if (this.SePerderanLosCambios())
             {
-                var confirmResult = MessageBox.Show(Mensajes.CLIENTES_ALTA_VOLVER, "Alerta", MessageBoxButtons.YesNo);
+                var confirmResult = MessageBox.Show(Mensajes.Paciente_Alta_VOLVER, "Alerta", MessageBoxButtons.YesNo);
 
                 if (confirmResult == DialogResult.Yes)
                 {
@@ -201,9 +201,9 @@ namespace Gestionador.View.HistoriaClinica
         
         private void Volver()
         {
-            HistoriaClinica_ABM clientesABM = (HistoriaClinica_ABM)Tag;
-            clientesABM.StartPosition = FormStartPosition.CenterParent;
-            clientesABM.Show();
+            HistoriaClinica_ABM PacientesABM = (HistoriaClinica_ABM)Tag;
+            PacientesABM.StartPosition = FormStartPosition.CenterParent;
+            PacientesABM.Show();
             this.Close();
         }
 

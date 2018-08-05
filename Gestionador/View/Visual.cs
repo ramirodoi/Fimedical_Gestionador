@@ -17,6 +17,6 @@ namespace Gestionador.View
         static public int FONDO_COMPONENTE_BLUE = 255;
         static private string path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
         static public string IMAGEN_HOME = string.Format("{0}{1}", path, @"\View\Home\Images\Logo.jpg");
-        static public string IMAGEN_ABM = string.Format("{0}{1}", path, @"\View\Clientes\Images\Coolsculpting.jpg");
+        static public string IMAGEN_ABM = string.Format("{0}{1}", path, @"\View\Paciente\Images\Coolsculpting.jpg");
     }
 }

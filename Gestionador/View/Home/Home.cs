@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Gestionador.View.Clientes;
+using Gestionador.View.Pacientes;
 using System.IO;
 using System.Reflection;
 using Gestionador.View.HistoriaClinica;
@@ -15,7 +15,7 @@ namespace Gestionador.View.Home
 {
     public partial class home : Form
     {
-        private Clientes_ABM clientesABM = null;
+        private Paciente_ABM PacientesABM = null;
         private HistoriaClinica_ABM hClinicaABM = null;
 
         public home()
@@ -24,14 +24,14 @@ namespace Gestionador.View.Home
             this.CargaInicial();
         }
 
-        private void Clientes_Click(object sender, EventArgs e)
+        private void Pacientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.clientesABM = new Clientes_ABM();
-            this.clientesABM.StartPosition = FormStartPosition.CenterParent;
-            this.clientesABM.Tag = this;
-            this.clientesABM.Region = this.Region;
-            this.clientesABM.ShowDialog(this);
+            this.PacientesABM = new Paciente_ABM();
+            this.PacientesABM.StartPosition = FormStartPosition.CenterParent;
+            this.PacientesABM.Tag = this;
+            this.PacientesABM.Region = this.Region;
+            this.PacientesABM.ShowDialog(this);
         }
 
         private void CargaInicial()
@@ -49,10 +49,11 @@ namespace Gestionador.View.Home
         {
             this.BackColor = Color.FromArgb(Visual.FONDO_COMPONENTE_RED, Visual.FONDO_COMPONENTE_GREEN, Visual.FONDO_COMPONENTE_BLUE);
 
-            this.btnClientes.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
+            this.btnPacientes.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
             this.btnHClinica.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
             this.btnTratamientos.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
-            this.btnEmpleados.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
+            this.btnProductos.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
+            this.btnMedicas.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
 
             this.MaximizeBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -1,6 +1,6 @@
-﻿namespace Gestionador.View.Clientes
+﻿namespace Gestionador.View.Pacientes
 {
-    partial class Clientes_Modificar_Editar
+    partial class Pacientes_Modificar_Editar
     {
         /// <summary>
         /// Required designer variable.
@@ -238,7 +238,7 @@
             this.lblDni.TabIndex = 23;
             this.lblDni.Text = "DNI:";
             // 
-            // Clientes_Modificar_Editar
+            // Pacientes_Modificar_Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,7 +265,7 @@
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnVolver);
-            this.Name = "Clientes_Modificar_Editar";
+            this.Name = "Pacientes_Modificar_Editar";
             this.Text = "Dar de Baja";
             this.ResumeLayout(false);
             this.PerformLayout();

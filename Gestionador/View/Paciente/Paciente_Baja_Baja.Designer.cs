@@ -1,6 +1,6 @@
-﻿namespace Gestionador.View.Clientes
+﻿namespace Gestionador.View.Pacientes
 {
-    partial class Clientes_Baja_Baja
+    partial class Paciente_Baja_Baja
     {
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,7 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // Clientes_Baja_Baja
+            // Paciente_Baja_Baja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,7 +83,7 @@
             this.Controls.Add(this.lblMotivo);
             this.Controls.Add(this.txtMotivo);
             this.Controls.Add(this.btnVolver);
-            this.Name = "Clientes_Baja_Baja";
+            this.Name = "Paciente_Baja_Baja";
             this.Text = "Editar";
             this.ResumeLayout(false);
             this.PerformLayout();

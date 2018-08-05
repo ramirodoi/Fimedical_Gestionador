@@ -8,15 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 using Gestionador.View.Home;
 
-namespace Gestionador.View.Clientes
+namespace Gestionador.View.Pacientes
 {
-    public partial class Clientes_ABM : Form
+    public partial class Paciente_ABM : Form
     {
-        private Clientes_Alta clientesAlta = null;
-        private Clientes_Baja clientesBaja = null;
-        private Clientes_Modificacion clientesModificacion = null;
+        private Paciente_Alta PacientesAlta = null;
+        private Paciente_Baja PacientesBaja = null;
+        private Paciente_Modificacion PacientesModificacion = null;
 
-        public Clientes_ABM()
+        public Paciente_ABM()
         {
             InitializeComponent();
             this.CargaInicial();
@@ -49,32 +49,32 @@ namespace Gestionador.View.Clientes
         private void btnAlta_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.clientesAlta = new Clientes_Alta();
-            this.clientesAlta.StartPosition = FormStartPosition.CenterParent;
-            this.clientesAlta.Tag = this;
-            this.clientesAlta.Region = this.Region;
-            this.clientesAlta.ShowDialog(this);
+            this.PacientesAlta = new Paciente_Alta();
+            this.PacientesAlta.StartPosition = FormStartPosition.CenterParent;
+            this.PacientesAlta.Tag = this;
+            this.PacientesAlta.Region = this.Region;
+            this.PacientesAlta.ShowDialog(this);
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Próximamente!");
             this.Hide();
-            this.clientesBaja = new Clientes_Baja();
-            this.clientesBaja.StartPosition = FormStartPosition.CenterParent;
-            this.clientesBaja.Tag = this;
-            this.clientesBaja.Region = this.Region;
-            this.clientesBaja.ShowDialog(this);
+            this.PacientesBaja = new Paciente_Baja();
+            this.PacientesBaja.StartPosition = FormStartPosition.CenterParent;
+            this.PacientesBaja.Tag = this;
+            this.PacientesBaja.Region = this.Region;
+            this.PacientesBaja.ShowDialog(this);
         }
 
         private void btnModificacion_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.clientesModificacion = new Clientes_Modificacion();
-            this.clientesModificacion.StartPosition = FormStartPosition.CenterParent;
-            this.clientesModificacion.Tag = this;
-            this.clientesModificacion.Region = this.Region;
-            this.clientesModificacion.ShowDialog(this);
+            this.PacientesModificacion = new Paciente_Modificacion();
+            this.PacientesModificacion.StartPosition = FormStartPosition.CenterParent;
+            this.PacientesModificacion.Tag = this;
+            this.PacientesModificacion.Region = this.Region;
+            this.PacientesModificacion.ShowDialog(this);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

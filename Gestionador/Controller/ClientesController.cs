@@ -9,81 +9,81 @@ using System.Data;
 
 namespace Gestionador.Controller
 {
-    class ClientesController
+    class PacientesController
     {
-        private Clientes cli = null;
+        private Pacientes cli = null;
         
-        public ClientesController()
+        public PacientesController()
         {
-            this.cli = new Clientes();
+            this.cli = new Pacientes();
         }
 
-        public bool GuardarCliente(string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
+        public bool GuardarPaciente(string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
         {
-            if (this.cli.ExisteCliente(dni))
+            if (this.cli.ExistePaciente(dni))
             {
                 return (false);
             }
 
-            this.cli.GuardarCliente(nombre, apellido, dni, fechaNacimiento, telefonoFijo, telefonoCelular, telefonoTrabajo, email, domicilio, localidad);
+            this.cli.GuardarPaciente(nombre, apellido, dni, fechaNacimiento, telefonoFijo, telefonoCelular, telefonoTrabajo, email, domicilio, localidad);
 
             return (true);
         }
 
-        public bool DarDeBajaCliente(int idCliente, string motivo)
+        public bool DarDeBajaPaciente(int idPaciente, string motivo)
         {
-            this.cli.DarDeBajaCliente(idCliente, motivo);
+            this.cli.DarDeBajaPaciente(idPaciente, motivo);
 
             return (true);
         }
         
-        public bool ActualizarCliente(int idCliente, string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
+        public bool ActualizarPaciente(int idPaciente, string nombre, string apellido, string dni, DateTime fechaNacimiento, string telefonoFijo, string telefonoCelular, string telefonoTrabajo, string email, string domicilio, string localidad)
         {
-            //TODO: Validar que el DNI modificado no coincida con el DNI de otro Cliente.
-            //if (this.cli.ObtenerIdClientePorDni(dni) != idCliente)
+            //TODO: Validar que el DNI modificado no coincida con el DNI de otro Paciente.
+            //if (this.cli.ObtenerIdPacientePorDni(dni) != idPaciente)
             //{
             //    return (false);
             //}
 
-            this.cli.ActualizarCliente(idCliente, nombre, apellido, dni, fechaNacimiento, telefonoFijo, telefonoCelular, telefonoTrabajo, email, domicilio, localidad);
+            this.cli.ActualizarPaciente(idPaciente, nombre, apellido, dni, fechaNacimiento, telefonoFijo, telefonoCelular, telefonoTrabajo, email, domicilio, localidad);
 
             return (true);
         }
 
-        public DataSet ObtenerDatosClientePorId(int idCliente)
+        public DataSet ObtenerDatosPacientePorId(int idPaciente)
         {
-            return (this.cli.ObtenerDatosClientePorId(idCliente));
+            return (this.cli.ObtenerDatosPacientePorId(idPaciente));
         }
 
-        public DataSet ObtenerDatosClientePorDni(string dni)
+        public DataSet ObtenerDatosPacientePorDni(string dni)
         {
-            return (this.cli.ObtenerDatosClientePorDni(dni));
+            return (this.cli.ObtenerDatosPacientePorDni(dni));
         }
 
-        public DataSet ObtenerTodosLosClientesActivos()
+        public DataSet ObtenerTodosLosPacientesActivos()
         {
-            return (this.cli.ObtenerTodosLosClientesActivos());
+            return (this.cli.ObtenerTodosLosPacientesActivos());
         }
 
-        public DataSet ObtenerDatosClientePorConsulta(string nombre, string apellido, string dni)
+        public DataSet ObtenerDatosPacientePorConsulta(string nombre, string apellido, string dni)
         {
-            return (this.cli.ObtenerDatosClientePorConsulta(nombre, apellido, dni));
+            return (this.cli.ObtenerDatosPacientePorConsulta(nombre, apellido, dni));
         }
 
-        //public DataSet ObtenerDatosCliente(ObtenerDatosClienteRequest req)
+        //public DataSet ObtenerDatosPaciente(ObtenerDatosPacienteRequest req)
         //{
         //    DataSet consulta = null;
 
         //    if (req != null)
         //    {
-        //        Cliente cliente = new Cliente()
+        //        Paciente Paciente = new Paciente()
         //        {
         //            Apellido = req.Apellido,
         //            Dni = req.Dni,
         //            Domicilio = req.Domicilio,
         //            Email = req.Email,
         //            FechaNacimiento = req.FechaNacimiento,
-        //            IdCliente = req.IdCliente,
+        //            IdPaciente = req.IdPaciente,
         //            Localidad = req.Localidad,
         //            Nombre = req.Nombre,
         //            TelefonoCelular = req.TelefonoCelular,
@@ -91,7 +91,7 @@ namespace Gestionador.Controller
         //            TelefonoTrabajo = req.TelefonoTrabajo
         //        };
 
-        //        consulta = this.cli.ObtenerDatosCliente(cliente);
+        //        consulta = this.cli.ObtenerDatosPaciente(Paciente);
         //    }
 
         //    return (consulta);

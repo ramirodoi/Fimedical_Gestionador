@@ -95,7 +95,7 @@
             this.dgHClinica.Location = new System.Drawing.Point(12, 348);
             this.dgHClinica.Name = "dgHClinica";
             this.dgHClinica.ReadOnly = true;
-            this.dgHClinica.Size = new System.Drawing.Size(922, 415);
+            this.dgHClinica.Size = new System.Drawing.Size(968, 415);
             this.dgHClinica.TabIndex = 0;
             // 
             // Tipo
@@ -362,7 +362,7 @@
             this.gbProducto.Controls.Add(this.lblFechaProducto);
             this.gbProducto.Controls.Add(this.lblNombreProducto);
             this.gbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbProducto.Location = new System.Drawing.Point(476, 90);
+            this.gbProducto.Location = new System.Drawing.Point(522, 90);
             this.gbProducto.Name = "gbProducto";
             this.gbProducto.Size = new System.Drawing.Size(458, 252);
             this.gbProducto.TabIndex = 18;
@@ -484,7 +484,7 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(784, 769);
+            this.btnVolver.Location = new System.Drawing.Point(830, 769);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(150, 50);
             this.btnVolver.TabIndex = 19;
@@ -495,7 +495,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(630, 769);
+            this.btnGuardar.Location = new System.Drawing.Point(674, 769);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(150, 50);
             this.btnGuardar.TabIndex = 20;
@@ -507,7 +507,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 823);
+            this.ClientSize = new System.Drawing.Size(992, 822);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.gbProducto);
