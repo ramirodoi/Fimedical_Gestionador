@@ -30,7 +30,8 @@ namespace Gestionador.View.Pacientes
 
         private void CargarImagen()
         {
-            this.imgCool.Image = Image.FromFile(Visual.IMAGEN_ABM);
+            this.imgCool.Image = Image.FromFile(Visual.IMAGEN_PACIENTE_ABM);
+            this.imgCool.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void CargarFormatoVentana()

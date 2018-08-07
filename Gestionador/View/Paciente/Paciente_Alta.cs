@@ -112,7 +112,7 @@ namespace Gestionador.View.Pacientes
 
         private bool PuedeGuardar()
         {
-            if (this.txtNombre.Text.Length > 0 && this.txtApellido.Text.Length > 0 && this.txtDni.Text.Length > 0 && this.dpFechaNacimiento.Value != null && this.txtTelefonoCelular.Text.Length > 0)
+            if (this.txtNombre.Text.Length > 0 && this.txtApellido.Text.Length > 0 && this.txtDni.Text.Length > 0 && this.dpFechaNacimiento.CustomFormat != " " && this.txtTelefonoCelular.Text.Length > 0)
             {
                 return(true);
             }

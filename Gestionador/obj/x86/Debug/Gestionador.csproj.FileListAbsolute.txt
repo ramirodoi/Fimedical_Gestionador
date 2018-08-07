@@ -30,12 +30,11 @@ C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\View\H
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\Gestionador.exe
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\Gestionador.pdb
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.View.HistoriaClinica.HistoriaClinica_Consulta.resources
-C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\View\Paciente\Images\Candela.jpg
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\View\Paciente\Images\Coolsculpting.jpg
-C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\View\Paciente\Images\Ultherapy.jpg
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.View.Pacientes.Paciente_Alta.resources
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.View.Pacientes.Paciente_ABM.resources
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.View.Pacientes.Paciente_Baja.resources
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.View.Pacientes.Paciente_Modificacion.resources
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.View.Pacientes.Paciente_Baja_Baja.resources
 C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\obj\x86\Debug\Gestionador.View.Pacientes.Pacientes_Modificar_Editar.resources
+C:\Users\rha\Documents\GitHub\Fimedical_Gestionador\Gestionador\bin\Debug\View\HistoriaClinica\Images\VelaShape3.jpg

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnPacientes = new System.Windows.Forms.Button();
-            this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.imgLogo = new Gestionador.View.Common.CustomPictureBox();
             this.btnHClinica = new System.Windows.Forms.Button();
             this.btnTratamientos = new System.Windows.Forms.Button();
             this.btnMedicas = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             // 
             this.btnPacientes.BackColor = System.Drawing.SystemColors.Control;
             this.btnPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.Location = new System.Drawing.Point(79, 348);
+            this.btnPacientes.Location = new System.Drawing.Point(93, 348);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.Size = new System.Drawing.Size(150, 50);
             this.btnPacientes.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.imgLogo.Location = new System.Drawing.Point(26, 12);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(440, 310);
+            this.imgLogo.Size = new System.Drawing.Size(440, 330);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imgLogo.TabIndex = 1;
             this.imgLogo.TabStop = false;
@@ -61,7 +61,7 @@
             // btnHClinica
             // 
             this.btnHClinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHClinica.Location = new System.Drawing.Point(235, 348);
+            this.btnHClinica.Location = new System.Drawing.Point(249, 348);
             this.btnHClinica.Name = "btnHClinica";
             this.btnHClinica.Size = new System.Drawing.Size(150, 50);
             this.btnHClinica.TabIndex = 1;
@@ -72,7 +72,7 @@
             // btnTratamientos
             // 
             this.btnTratamientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTratamientos.Location = new System.Drawing.Point(79, 404);
+            this.btnTratamientos.Location = new System.Drawing.Point(93, 404);
             this.btnTratamientos.Name = "btnTratamientos";
             this.btnTratamientos.Size = new System.Drawing.Size(150, 50);
             this.btnTratamientos.TabIndex = 2;
@@ -83,10 +83,10 @@
             // btnMedicas
             // 
             this.btnMedicas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedicas.Location = new System.Drawing.Point(235, 404);
+            this.btnMedicas.Location = new System.Drawing.Point(93, 460);
             this.btnMedicas.Name = "btnMedicas";
             this.btnMedicas.Size = new System.Drawing.Size(150, 50);
-            this.btnMedicas.TabIndex = 3;
+            this.btnMedicas.TabIndex = 4;
             this.btnMedicas.Text = "Médicas";
             this.btnMedicas.UseVisualStyleBackColor = true;
             this.btnMedicas.Click += new System.EventHandler(this.btnEmpleados_Click);
@@ -94,12 +94,13 @@
             // btnProductos
             // 
             this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Location = new System.Drawing.Point(79, 460);
+            this.btnProductos.Location = new System.Drawing.Point(249, 404);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(150, 50);
-            this.btnProductos.TabIndex = 4;
+            this.btnProductos.TabIndex = 3;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // home
             // 
@@ -124,7 +125,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnPacientes;
-        private System.Windows.Forms.PictureBox imgLogo;
+        private Common.CustomPictureBox imgLogo;
         private System.Windows.Forms.Button btnHClinica;
         private System.Windows.Forms.Button btnTratamientos;
         private System.Windows.Forms.Button btnMedicas;

@@ -57,7 +57,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FimedicalDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Model\Clientes.cs" />
+    <Compile Include="Model\Pacientes.cs" />
     <Compile Include="Model\MediosPago.cs" />
     <Compile Include="Model\Productos.cs" />
     <Compile Include="Model\Tratamientos.cs" />
@@ -66,6 +66,9 @@
     <Compile Include="Model\Queries.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Common\CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\Paciente\Paciente_ABM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,13 +200,12 @@
     <Folder Include="View\Tratamiento\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="View\Paciente\Images\Candela.jpg">
+    <Content Include="Scripts\CREATE_TABLE.sql" />
+    <Content Include="Scripts\CREATE_TEST.sql" />
+    <Content Include="View\HistoriaClinica\Images\VelaShape3.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="View\Paciente\Images\Coolsculpting.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="View\Paciente\Images\Ultherapy.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="View\Home\Images\Logo.jpg">

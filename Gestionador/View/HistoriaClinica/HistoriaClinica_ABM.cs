@@ -12,6 +12,7 @@ namespace Gestionador.View.HistoriaClinica
     public partial class HistoriaClinica_ABM : Form
     {
         private HistoriaClinica_Alta hClinicaAlta = null;
+        private HistoriaClinica_Consulta hClinicaConsulta = null;
 
         public HistoriaClinica_ABM()
         {
@@ -27,7 +28,8 @@ namespace Gestionador.View.HistoriaClinica
 
         private void CargarImagen()
         {
-            //this.imgCool.Image = Image.FromFile(Visual.IMAGEN_ABM);
+            this.imgVela.Image = Image.FromFile(Visual.IMAGEN_HISTORIA_CLINICA_ABM);
+            this.imgVela.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void CargarFormatoVentana()
@@ -35,8 +37,7 @@ namespace Gestionador.View.HistoriaClinica
             this.BackColor = Color.FromArgb(Visual.FONDO_COMPONENTE_RED, Visual.FONDO_COMPONENTE_GREEN, Visual.FONDO_COMPONENTE_BLUE);
 
             this.btnAlta.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
-            //this.btnBaja.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
-            //this.btnModificacion.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
+            this.btnConsultas.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
             this.btnVolver.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
 
             this.MaximizeBox = false;
@@ -51,6 +52,16 @@ namespace Gestionador.View.HistoriaClinica
             this.hClinicaAlta.Tag = this;
             this.hClinicaAlta.Region = this.Region;
             this.hClinicaAlta.ShowDialog(this);
+        }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.hClinicaConsulta = new HistoriaClinica_Consulta();
+            this.hClinicaConsulta.StartPosition = FormStartPosition.CenterParent;
+            this.hClinicaConsulta.Tag = this;
+            this.hClinicaConsulta.Region = this.Region;
+            this.hClinicaConsulta.ShowDialog(this);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

@@ -24,16 +24,6 @@ namespace Gestionador.View.Home
             this.CargaInicial();
         }
 
-        private void Pacientes_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.PacientesABM = new Paciente_ABM();
-            this.PacientesABM.StartPosition = FormStartPosition.CenterParent;
-            this.PacientesABM.Tag = this;
-            this.PacientesABM.Region = this.Region;
-            this.PacientesABM.ShowDialog(this);
-        }
-
         private void CargaInicial()
         {
             this.CargarFormatoVentana();
@@ -43,6 +33,7 @@ namespace Gestionador.View.Home
         private void CargarImagen()
         {
             this.imgLogo.Image = Image.FromFile(Visual.IMAGEN_HOME);
+            this.imgLogo.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void CargarFormatoVentana()
@@ -57,6 +48,16 @@ namespace Gestionador.View.Home
 
             this.MaximizeBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        }
+
+        private void Pacientes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.PacientesABM = new Paciente_ABM();
+            this.PacientesABM.StartPosition = FormStartPosition.CenterParent;
+            this.PacientesABM.Tag = this;
+            this.PacientesABM.Region = this.Region;
+            this.PacientesABM.ShowDialog(this);
         }
 
         private void btnHClinica_Click(object sender, EventArgs e)
@@ -75,6 +76,11 @@ namespace Gestionador.View.Home
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Próximamente!");
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Próximamente!");
         }

@@ -18,7 +18,6 @@ namespace Gestionador.View.HistoriaClinica
         private TratamientosController tratamientosController = null;
         private MedicasController medicasController = null;
         private ProductosController productosController = null;
-        private MediosPagoController mediosPagoController = null;
 
         public HistoriaClinica_Consulta()
         {
@@ -29,35 +28,45 @@ namespace Gestionador.View.HistoriaClinica
             this.tratamientosController = new TratamientosController();
             this.medicasController = new MedicasController();
             this.productosController = new ProductosController();
-            this.mediosPagoController = new MediosPagoController();
 
             this.CargarFormatoVentana();
+            this.CargarFormateDatePicker();
+
             this.CargarComboPacientes();
-            this.CargarTratamientos();
-            this.CargarProductos();
+            this.CargarComboMedicas();
+            this.CargarComboTratamientos();
+            this.CargarComboProductos();
             
+        }
+
+        /// <summary>
+        /// Carga incial del datetimepicker fecha de nacimiento vacio.
+        /// </summary>
+        private void CargarFormateDatePicker()
+        {
+            dpFecha.Format = DateTimePickerFormat.Custom;
+            dpFecha.CustomFormat = " ";
+        }
+
+        /// <summary>
+        /// Formatea el datetimepicker fecha de nacimiento cuando se carga.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dpFechaTratamiento_ValueChanged(object sender, EventArgs e)
+        {
+            dpFecha.CustomFormat = "dd/MM/yyyy";
         }
 
         private void CargarFormatoVentana()
         {
             this.BackColor = Color.FromArgb(Visual.FONDO_COMPONENTE_RED, Visual.FONDO_COMPONENTE_GREEN, Visual.FONDO_COMPONENTE_BLUE);
 
-            this.btnBuscar.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
+            this.btnConsultar.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
             this.btnVolver.BackColor = Color.FromArgb(Visual.BOTON_COMPONENTE_RED, Visual.BOTON_COMPONENTE_GREEN, Visual.BOTON_COMPONENTE_BLUE);
 
             this.MaximizeBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-        }
-
-        private void CargarTratamientos()
-        {
-            this.CargarComboTratamientos();
-            this.CargarComboMedicas();
-        }
-
-        private void CargarProductos()
-        {
-            this.CargarComboProductos();
         }
 
         #region Carga Combos
@@ -70,7 +79,6 @@ namespace Gestionador.View.HistoriaClinica
             item = new ComboboxItem();
             item.Text = "-";
             item.Value = -1;
-
             cbPaciente.Items.Add(item);
 
             if (pacientes != null && pacientes.Tables[0] != null && pacientes.Tables[0].Rows.Count > 0)
@@ -88,30 +96,16 @@ namespace Gestionador.View.HistoriaClinica
             }
         }
 
-        private void CargarComboTratamientos()
-        {
-            DataSet tratamientos = this.tratamientosController.ObtenerTodosLosTratamientosActivos();
-            ComboboxItem item = null;
-
-            if (tratamientos != null && tratamientos.Tables[0] != null && tratamientos.Tables[0].Rows.Count > 0)
-            {
-                foreach (DataRow tratamiento in tratamientos.Tables[0].Rows)
-                {
-                    item = new ComboboxItem();
-                    item.Text = string.Format("{0}", tratamiento["nombre"].ToString());
-                    item.Value = tratamiento["idTratamiento"].ToString();
-
-                    cbTratamiento.Items.Add(item);
-                }
-
-                cbTratamiento.SelectedIndex = 0;
-            }
-        }
-
         private void CargarComboMedicas()
         {
             DataSet medicas = this.medicasController.ObtenerTodasLasMedicasActivas();
             ComboboxItem item = null;
+
+            //Item vacio.
+            item = new ComboboxItem();
+            item.Text = "-";
+            item.Value = -1;
+            cbMedica.Items.Add(item);
 
             if (medicas != null && medicas.Tables[0] != null && medicas.Tables[0].Rows.Count > 0)
             {
@@ -128,10 +122,42 @@ namespace Gestionador.View.HistoriaClinica
             }
         }
 
+        private void CargarComboTratamientos()
+        {
+            DataSet tratamientos = this.tratamientosController.ObtenerTodosLosTratamientosActivos();
+            ComboboxItem item = null;
+
+            //Item vacio.
+            item = new ComboboxItem();
+            item.Text = "-";
+            item.Value = -1;
+            cbTratamiento.Items.Add(item);
+
+            if (tratamientos != null && tratamientos.Tables[0] != null && tratamientos.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow tratamiento in tratamientos.Tables[0].Rows)
+                {
+                    item = new ComboboxItem();
+                    item.Text = string.Format("{0}", tratamiento["nombre"].ToString());
+                    item.Value = tratamiento["idTratamiento"].ToString();
+
+                    cbTratamiento.Items.Add(item);
+                }
+
+                cbTratamiento.SelectedIndex = 0;
+            }
+        }
+
         private void CargarComboProductos()
         {
             DataSet productos = this.productosController.ObtenerTodosLosProductosActivos();
             ComboboxItem item = null;
+
+            //Item vacio.
+            item = new ComboboxItem();
+            item.Text = "-";
+            item.Value = -1;
+            cbProducto.Items.Add(item);
 
             if (productos != null && productos.Tables[0] != null && productos.Tables[0].Rows.Count > 0)
             {
@@ -149,54 +175,37 @@ namespace Gestionador.View.HistoriaClinica
         }
         #endregion Fin Carga Combos
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (this.PuedeGuardar())
+            if (int.Parse(((ComboboxItem)this.cbPaciente.SelectedItem).Value.ToString()) > 0)
             {
-            }
-            else
-            {
-                MessageBox.Show(Mensajes.HCLINICA_ALTA_VALIDACION_GUARDAR);
-            }
-        }
+                DateTime? fecha = null;
 
-        private DataTable ObtenerHistoriaClinicaComoTabla()
-        {
-            DataTable dt = new DataTable();
-
-            foreach (DataGridViewColumn col in dgHClinica.Columns)
-            {
-               dt.Columns.Add(col.Name);    
-            }
-
-            foreach (DataGridViewRow row in dgHClinica.Rows)
-            {
-                DataRow dRow = dt.NewRow();
-                foreach(DataGridViewCell cell in row.Cells)
+                if (this.dpFecha.CustomFormat != " ")
                 {
-                    dRow[cell.ColumnIndex] = cell.Value;
+                    fecha = this.dpFecha.Value;
                 }
-                dt.Rows.Add(dRow);
-            }
 
-            return (dt);
+                if (int.Parse(((ComboboxItem)this.cbMedica.SelectedItem).Value.ToString()) > 0 || int.Parse(((ComboboxItem)this.cbTratamiento.SelectedItem).Value.ToString()) > 0 || int.Parse(((ComboboxItem)this.cbProducto.SelectedItem).Value.ToString()) > 0)
+                {
+                    DataSet ds = this.hClinicaController.ObtenerHistoriaClinicaPorConsulta(int.Parse(((ComboboxItem)this.cbPaciente.SelectedItem).Value.ToString()), int.Parse(((ComboboxItem)this.cbMedica.SelectedItem).Value.ToString()), int.Parse(((ComboboxItem)this.cbTratamiento.SelectedItem).Value.ToString()), int.Parse(((ComboboxItem)this.cbProducto.SelectedItem).Value.ToString()), fecha);
+
+                    if (ds != null && ds.Tables[0] != null && ds.Tables[0].Rows.Count > 0)
+                    {
+                        BindingSource bindingSource = new BindingSource();
+
+                        bindingSource.DataSource = ds.Tables[0];
+
+                        dgHClinica.AutoGenerateColumns = false;
+                        dgHClinica.DataSource = bindingSource;
+                    }
+                }
+            }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            if (this.SePerderanLosCambios())
-            {
-                var confirmResult = MessageBox.Show(Mensajes.Paciente_Alta_VOLVER, "Alerta", MessageBoxButtons.YesNo);
-
-                if (confirmResult == DialogResult.Yes)
-                {
-                    this.Volver();
-                }
-            }
-            else
-            {
-                this.Volver();
-            }
+            this.Volver();
         }
         
         private void Volver()
@@ -212,27 +221,5 @@ namespace Gestionador.View.HistoriaClinica
             MessageBox.Show(mensaje);
             this.Volver();
         }
-
-        #region Validaciones
-        private bool PuedeGuardar()
-        {
-            if (!((ComboboxItem)this.cbPaciente.SelectedItem).Text.ToString().Equals("-") && this.dgHClinica.RowCount > 0)
-            {
-                return (true);
-            }
-
-            return (false);
-        }
-
-        private bool SePerderanLosCambios()
-        {
-            if (this.dgHClinica.RowCount > 0)
-            {
-                return (true);
-            }
-
-            return (false);
-        }
-        #endregion Validaciones  
     }
 }

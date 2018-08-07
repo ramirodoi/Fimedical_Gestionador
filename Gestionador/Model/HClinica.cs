@@ -97,5 +97,273 @@ namespace Gestionador.Model
 
             this.connectionString.Close();
         }
+
+        //public DataSet ObtenerHistoriaClinicaPorConsulta(int idPaciente, int idMedica, int idTratamiento, int idProducto, DateTime? fecha)
+        //{
+        //    this.connectionString.Open();
+
+        //    this.cmd = new SqlCommand(Queries.OBTENER_HISTORIA_CLINICA_POR_CONSULTA_TRATAMIENTO, connectionString);
+
+        //    #region ValidaParametros
+        //    if (idPaciente > 0)
+        //    {
+        //        cmd.Parameters.AddWithValue("@p1", idPaciente);
+        //    }
+        //    else
+        //    {
+        //        cmd.Parameters.AddWithValue("@p1", DBNull.Value);
+        //    }
+
+        //    if (idMedica > 0)
+        //    {
+        //        cmd.Parameters.AddWithValue("@p2", idMedica);
+        //    }
+        //    else
+        //    {
+        //        cmd.Parameters.AddWithValue("@p2", DBNull.Value);
+        //    }
+
+        //    if (idTratamiento > 0)
+        //    {
+        //        cmd.Parameters.AddWithValue("@p3", idTratamiento);
+        //    }
+        //    else
+        //    {
+        //        cmd.Parameters.AddWithValue("@p3", DBNull.Value);
+        //    }
+
+        //    if (idProducto > 0)
+        //    {
+        //        cmd.Parameters.AddWithValue("@p4", idProducto);
+        //    }
+        //    else
+        //    {
+        //        cmd.Parameters.AddWithValue("@p4", DBNull.Value);
+        //    }
+
+        //    if (fecha != null)
+        //    {
+        //        cmd.Parameters.AddWithValue("@p5", fecha);
+        //    }
+        //    else
+        //    {
+        //        cmd.Parameters.AddWithValue("@p5", DBNull.Value);
+        //    }
+        //    #endregion ValidaParametros
+
+        //    this.sqlDataAdapter = new SqlDataAdapter(cmd);
+
+        //    DataSet ds = new DataSet();
+        //    this.sqlDataAdapter.Fill(ds, "HistoriaClinica");
+
+        //    this.connectionString.Close();
+
+        //    return (ds);
+        //}
+
+        public DataSet ObtenerHistoriaClinicaPorConsulta(int idPaciente, int idMedica, int idTratamiento, int idProducto, DateTime? fecha)
+        {
+            this.connectionString.Open();
+            DataSet ds = new DataSet();
+
+            //Tratamientos
+            if (idMedica > 0 || idTratamiento > 0)
+            {
+                this.cmd = new SqlCommand(Queries.OBTENER_HISTORIA_CLINICA_POR_CONSULTA_TRATAMIENTO, connectionString);
+
+                #region ValidaParametros
+                if (idPaciente > 0)
+                {
+                    cmd.Parameters.AddWithValue("@p1", idPaciente);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p1", DBNull.Value);
+                }
+
+                if (idMedica > 0)
+                {
+                    cmd.Parameters.AddWithValue("@p2", idMedica);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p2", DBNull.Value);
+                }
+
+                if (idTratamiento > 0)
+                {
+                    cmd.Parameters.AddWithValue("@p3", idTratamiento);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p3", DBNull.Value);
+                }
+
+                if (idProducto > 0)
+                {
+                    cmd.Parameters.AddWithValue("@p4", idProducto);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p4", DBNull.Value);
+                }
+
+                if (fecha != null)
+                {
+                    cmd.Parameters.AddWithValue("@p5", fecha);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p5", DBNull.Value);
+                }
+                #endregion ValidaParametros
+
+                this.sqlDataAdapter = new SqlDataAdapter(cmd);
+
+                this.sqlDataAdapter.Fill(ds, "HistoriaClinica");
+            }
+
+            //Tratamientos
+            if (idProducto > 0)
+            {
+                this.cmd = new SqlCommand(Queries.OBTENER_HISTORIA_CLINICA_POR_CONSULTA_PRODUCTO, connectionString);
+
+                #region ValidaParametros
+                if (idPaciente > 0)
+                {
+                    cmd.Parameters.AddWithValue("@p1", idPaciente);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p1", DBNull.Value);
+                }
+
+                if (idProducto > 0)
+                {
+                    cmd.Parameters.AddWithValue("@p4", idProducto);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p4", DBNull.Value);
+                }
+
+                if (fecha != null)
+                {
+                    cmd.Parameters.AddWithValue("@p5", fecha);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@p5", DBNull.Value);
+                }
+                #endregion ValidaParametros
+
+                this.sqlDataAdapter = new SqlDataAdapter(cmd);
+
+                this.sqlDataAdapter.Fill(ds, "HistoriaClinica");
+            }
+
+            this.connectionString.Close();
+
+            return (ds);
+        }
+
+        public DataSet ObtenerHistoriaClinicaPorConsultaTratamiento(int idPaciente, int idMedica, int idTratamiento, DateTime? fecha)
+        {
+            this.connectionString.Open();
+
+            this.cmd = new SqlCommand(Queries.OBTENER_HISTORIA_CLINICA_POR_CONSULTA_TRATAMIENTO, connectionString);
+
+            #region ValidaParametros
+            if (idPaciente > 0)
+            {
+                cmd.Parameters.AddWithValue("@p1", idPaciente);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@p1", DBNull.Value);
+            }
+
+            if (idMedica > 0)
+            {
+                cmd.Parameters.AddWithValue("@p2", idMedica);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@p2", DBNull.Value);
+            }
+
+            if (idTratamiento > 0)
+            {
+                cmd.Parameters.AddWithValue("@p3", idTratamiento);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@p3", DBNull.Value);
+            }
+
+            if (fecha != null)
+            {
+                cmd.Parameters.AddWithValue("@p5", fecha);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@p5", DBNull.Value);
+            }
+            #endregion ValidaParametros
+
+            this.sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            this.sqlDataAdapter.Fill(ds, "HistoriaClinica");
+
+            this.connectionString.Close();
+
+            return (ds);
+        }
+
+        public DataSet ObtenerHistoriaClinicaPorConsultaProducto(int idPaciente, int idProducto, DateTime? fecha)
+        {
+            this.connectionString.Open();
+
+            this.cmd = new SqlCommand(Queries.OBTENER_HISTORIA_CLINICA_POR_CONSULTA_PRODUCTO, connectionString);
+
+            #region ValidaParametros
+            if (idPaciente > 0)
+            {
+                cmd.Parameters.AddWithValue("@p1", idPaciente);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@p1", DBNull.Value);
+            }
+
+            if (idProducto > 0)
+            {
+                cmd.Parameters.AddWithValue("@p4", idProducto);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@p4", DBNull.Value);
+            }
+
+            if (fecha != null)
+            {
+                cmd.Parameters.AddWithValue("@p5", fecha);
+            }
+            else
+            {
+                cmd.Parameters.AddWithValue("@p5", DBNull.Value);
+            }
+            #endregion ValidaParametros
+
+            this.sqlDataAdapter = new SqlDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            this.sqlDataAdapter.Fill(ds, "HistoriaClinica");
+
+            this.connectionString.Close();
+
+            return (ds);
+        }
     }
 }

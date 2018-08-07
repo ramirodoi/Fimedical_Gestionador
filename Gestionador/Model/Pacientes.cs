@@ -24,7 +24,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_Paciente_POR_ID, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_PACIENTE_POR_ID, connectionString);
             cmd.Parameters.AddWithValue("@p1", idPaciente);
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
@@ -40,7 +40,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_ID_Paciente_POR_DNI, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_ID_PACIENTE_POR_DNI, connectionString);
             cmd.Parameters.AddWithValue("@p1", dni);
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
@@ -56,7 +56,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_ID_Paciente_POR_DNI, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_ID_PACIENTE_POR_DNI, connectionString);
             cmd.Parameters.AddWithValue("@p1", dni);
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
@@ -77,7 +77,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_TODOS_LOS_PacienteS_ACTIVOS, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_TODOS_LOS_PACIENTES_ACTIVOS, connectionString);
 
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
 
@@ -93,7 +93,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_Paciente_POR_CONSULTA, connectionString);
+            this.cmd = new SqlCommand(Queries.OBTENER_DATOS_PACIENTE_POR_CONSULTA, connectionString);
 
             #region ValidaParametros
             if (nombre.Length > 0)
@@ -183,7 +183,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.EXISTE_Paciente_POR_IDENTIFICADOR, connectionString);
+            this.cmd = new SqlCommand(Queries.EXISTE_PACIENTE_POR_IDENTIFICADOR, connectionString);
             cmd.Parameters.AddWithValue("@p1", identificador);
             cmd.Parameters.AddWithValue("@p2", int.Parse(identificador));
             this.sqlDataAdapter = new SqlDataAdapter(cmd);
@@ -206,7 +206,7 @@ namespace Gestionador.Model
             
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.GUARDAR_ALTA_Paciente, connectionString);
+            this.cmd = new SqlCommand(Queries.GUARDAR_ALTA_PACIENTE, connectionString);
 
             #region ValidaParametros
             if (nombre != null && nombre.Length > 0)
@@ -310,7 +310,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.GUARDAR_EDITAR_Paciente, connectionString);
+            this.cmd = new SqlCommand(Queries.GUARDAR_EDITAR_PACIENTE, connectionString);
 
             #region ValidaParametros
             if (idPaciente > 0)
@@ -423,7 +423,7 @@ namespace Gestionador.Model
         {
             this.connectionString.Open();
 
-            this.cmd = new SqlCommand(Queries.GUARDAR_BAJA_Paciente, connectionString);
+            this.cmd = new SqlCommand(Queries.GUARDAR_BAJA_PACIENTE, connectionString);
 
             #region ValidaParametros
             if (idPaciente > 0)

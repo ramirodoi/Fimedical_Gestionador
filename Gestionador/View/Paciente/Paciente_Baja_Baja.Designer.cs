@@ -36,10 +36,11 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(180, 238);
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(329, 408);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 25);
+            this.btnVolver.Size = new System.Drawing.Size(150, 50);
             this.btnVolver.TabIndex = 0;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -48,27 +49,30 @@
             // txtMotivo
             // 
             this.txtMotivo.AccessibleName = "";
-            this.txtMotivo.Location = new System.Drawing.Point(12, 25);
+            this.txtMotivo.Location = new System.Drawing.Point(13, 38);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(268, 207);
+            this.txtMotivo.Size = new System.Drawing.Size(466, 360);
             this.txtMotivo.TabIndex = 1;
             // 
             // lblMotivo
             // 
             this.lblMotivo.AutoSize = true;
-            this.lblMotivo.Location = new System.Drawing.Point(12, 9);
+            this.lblMotivo.Location = new System.Drawing.Point(9, 13);
+            this.lblMotivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Size = new System.Drawing.Size(42, 13);
+            this.lblMotivo.Size = new System.Drawing.Size(59, 20);
             this.lblMotivo.TabIndex = 5;
             this.lblMotivo.Text = "Motivo:";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(74, 238);
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(171, 408);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 25);
+            this.btnGuardar.Size = new System.Drawing.Size(150, 50);
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -76,15 +80,17 @@
             // 
             // Paciente_Baja_Baja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 273);
+            this.ClientSize = new System.Drawing.Size(492, 472);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblMotivo);
             this.Controls.Add(this.txtMotivo);
             this.Controls.Add(this.btnVolver);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Paciente_Baja_Baja";
-            this.Text = "Editar";
+            this.Text = "Detalle";
             this.ResumeLayout(false);
             this.PerformLayout();
 

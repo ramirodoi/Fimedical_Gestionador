@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Gestionador.Model;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Gestionador.Controller
 {
@@ -34,6 +35,11 @@ namespace Gestionador.Controller
                     this.hcli.GuardarHistoriaClinicaProductos(idHistoriaClinica, ProductosList);
                 }
             }
+        }
+
+        public DataSet ObtenerHistoriaClinicaPorConsulta(int idPaciente, int idMedica, int idTratamiento, int idProducto, DateTime? fecha)
+        {
+            return (this.hcli.ObtenerHistoriaClinicaPorConsulta(idPaciente, idMedica, idTratamiento, idProducto, fecha));
         }
     }
 }
