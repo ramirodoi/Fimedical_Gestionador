@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.dgHClinica = new System.Windows.Forms.DataGridView();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMedica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbTratamiento = new System.Windows.Forms.ComboBox();
             this.dpFechaTratamiento = new System.Windows.Forms.DateTimePicker();
             this.cbMedica = new System.Windows.Forms.ComboBox();
@@ -60,16 +70,6 @@
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMedica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgHClinica)).BeginInit();
             this.gbTratamiento.SuspendLayout();
             this.gbPaciente.SuspendLayout();
@@ -98,6 +98,75 @@
             this.dgHClinica.ReadOnly = true;
             this.dgHClinica.Size = new System.Drawing.Size(966, 370);
             this.dgHClinica.TabIndex = 0;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            // 
+            // idNombre
+            // 
+            this.idNombre.HeaderText = "idNombre";
+            this.idNombre.Name = "idNombre";
+            this.idNombre.ReadOnly = true;
+            this.idNombre.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.FillWeight = 150F;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 150;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // idMedica
+            // 
+            this.idMedica.HeaderText = "idMedica";
+            this.idMedica.Name = "idMedica";
+            this.idMedica.ReadOnly = true;
+            this.idMedica.Visible = false;
+            // 
+            // Medica
+            // 
+            this.Medica.FillWeight = 200F;
+            this.Medica.HeaderText = "Médica";
+            this.Medica.Name = "Medica";
+            this.Medica.ReadOnly = true;
+            this.Medica.Width = 200;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio $";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Pago
+            // 
+            this.Pago.HeaderText = "Pago $";
+            this.Pago.Name = "Pago";
+            this.Pago.ReadOnly = true;
+            // 
+            // idMedioPago
+            // 
+            this.idMedioPago.HeaderText = "idMedioPago";
+            this.idMedioPago.Name = "idMedioPago";
+            this.idMedioPago.ReadOnly = true;
+            this.idMedioPago.Visible = false;
+            // 
+            // MedioPago
+            // 
+            this.MedioPago.FillWeight = 150F;
+            this.MedioPago.HeaderText = "Medio de Pago";
+            this.MedioPago.Name = "MedioPago";
+            this.MedioPago.ReadOnly = true;
+            this.MedioPago.Width = 150;
             // 
             // cbTratamiento
             // 
@@ -476,79 +545,9 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            // 
-            // idNombre
-            // 
-            this.idNombre.HeaderText = "idNombre";
-            this.idNombre.Name = "idNombre";
-            this.idNombre.ReadOnly = true;
-            this.idNombre.Visible = false;
-            // 
-            // Nombre
-            // 
-            this.Nombre.FillWeight = 150F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 150;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // idMedica
-            // 
-            this.idMedica.HeaderText = "idMedica";
-            this.idMedica.Name = "idMedica";
-            this.idMedica.ReadOnly = true;
-            this.idMedica.Visible = false;
-            // 
-            // Medica
-            // 
-            this.Medica.FillWeight = 200F;
-            this.Medica.HeaderText = "Médica";
-            this.Medica.Name = "Medica";
-            this.Medica.ReadOnly = true;
-            this.Medica.Width = 200;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio $";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Pago
-            // 
-            this.Pago.HeaderText = "Pago $";
-            this.Pago.Name = "Pago";
-            this.Pago.ReadOnly = true;
-            // 
-            // idMedioPago
-            // 
-            this.idMedioPago.HeaderText = "idMedioPago";
-            this.idMedioPago.Name = "idMedioPago";
-            this.idMedioPago.ReadOnly = true;
-            this.idMedioPago.Visible = false;
-            // 
-            // MedioPago
-            // 
-            this.MedioPago.FillWeight = 150F;
-            this.MedioPago.HeaderText = "Medio de Pago";
-            this.MedioPago.Name = "MedioPago";
-            this.MedioPago.ReadOnly = true;
-            this.MedioPago.Width = 150;
-            // 
             // HistoriaClinica_Alta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(992, 822);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGuardar);
