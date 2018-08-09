@@ -41,9 +41,10 @@
             // 
             this.btnPacientes.BackColor = System.Drawing.SystemColors.Control;
             this.btnPacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPacientes.Location = new System.Drawing.Point(93, 348);
+            this.btnPacientes.Location = new System.Drawing.Point(110, 425);
+            this.btnPacientes.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(150, 50);
+            this.btnPacientes.Size = new System.Drawing.Size(185, 59);
             this.btnPacientes.TabIndex = 0;
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.UseVisualStyleBackColor = false;
@@ -51,9 +52,10 @@
             // 
             // imgLogo
             // 
-            this.imgLogo.Location = new System.Drawing.Point(26, 12);
+            this.imgLogo.Location = new System.Drawing.Point(32, 16);
+            this.imgLogo.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(440, 330);
+            this.imgLogo.Size = new System.Drawing.Size(539, 395);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imgLogo.TabIndex = 1;
             this.imgLogo.TabStop = false;
@@ -61,9 +63,10 @@
             // btnHClinica
             // 
             this.btnHClinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHClinica.Location = new System.Drawing.Point(249, 348);
+            this.btnHClinica.Location = new System.Drawing.Point(307, 425);
+            this.btnHClinica.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnHClinica.Name = "btnHClinica";
-            this.btnHClinica.Size = new System.Drawing.Size(150, 50);
+            this.btnHClinica.Size = new System.Drawing.Size(185, 59);
             this.btnHClinica.TabIndex = 1;
             this.btnHClinica.Text = "Historia Clínica";
             this.btnHClinica.UseVisualStyleBackColor = true;
@@ -72,9 +75,10 @@
             // btnTratamientos
             // 
             this.btnTratamientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTratamientos.Location = new System.Drawing.Point(93, 404);
+            this.btnTratamientos.Location = new System.Drawing.Point(110, 498);
+            this.btnTratamientos.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnTratamientos.Name = "btnTratamientos";
-            this.btnTratamientos.Size = new System.Drawing.Size(150, 50);
+            this.btnTratamientos.Size = new System.Drawing.Size(185, 59);
             this.btnTratamientos.TabIndex = 2;
             this.btnTratamientos.Text = "Tratamientos";
             this.btnTratamientos.UseVisualStyleBackColor = true;
@@ -83,9 +87,10 @@
             // btnMedicas
             // 
             this.btnMedicas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedicas.Location = new System.Drawing.Point(93, 460);
+            this.btnMedicas.Location = new System.Drawing.Point(110, 571);
+            this.btnMedicas.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnMedicas.Name = "btnMedicas";
-            this.btnMedicas.Size = new System.Drawing.Size(150, 50);
+            this.btnMedicas.Size = new System.Drawing.Size(185, 59);
             this.btnMedicas.TabIndex = 4;
             this.btnMedicas.Text = "Médicas";
             this.btnMedicas.UseVisualStyleBackColor = true;
@@ -94,9 +99,10 @@
             // btnProductos
             // 
             this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Location = new System.Drawing.Point(249, 404);
+            this.btnProductos.Location = new System.Drawing.Point(307, 498);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(150, 50);
+            this.btnProductos.Size = new System.Drawing.Size(185, 59);
             this.btnProductos.TabIndex = 3;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
@@ -104,16 +110,17 @@
             // 
             // home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(492, 522);
+            this.ClientSize = new System.Drawing.Size(603, 647);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnMedicas);
             this.Controls.Add(this.btnTratamientos);
             this.Controls.Add(this.btnHClinica);
             this.Controls.Add(this.imgLogo);
             this.Controls.Add(this.btnPacientes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

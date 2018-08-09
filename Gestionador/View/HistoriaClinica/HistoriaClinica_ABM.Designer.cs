@@ -38,7 +38,7 @@
             // btnAlta
             // 
             this.btnAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlta.Location = new System.Drawing.Point(112, 419);
+            this.btnAlta.Location = new System.Drawing.Point(110, 425);
             this.btnAlta.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(185, 59);
@@ -50,7 +50,7 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(306, 491);
+            this.btnVolver.Location = new System.Drawing.Point(307, 498);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(185, 59);
@@ -62,7 +62,7 @@
             // btnConsultas
             // 
             this.btnConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultas.Location = new System.Drawing.Point(306, 419);
+            this.btnConsultas.Location = new System.Drawing.Point(307, 425);
             this.btnConsultas.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Size = new System.Drawing.Size(185, 59);
@@ -73,17 +73,18 @@
             // 
             // imgVela
             // 
-            this.imgVela.Location = new System.Drawing.Point(33, 13);
-            this.imgVela.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.imgVela.Location = new System.Drawing.Point(32, 16);
+            this.imgVela.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.imgVela.Name = "imgVela";
             this.imgVela.Size = new System.Drawing.Size(539, 395);
+            this.imgVela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imgVela.TabIndex = 3;
             this.imgVela.TabStop = false;
             // 
             // HistoriaClinica_ABM
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(603, 627);
+            this.ClientSize = new System.Drawing.Size(603, 648);
             this.Controls.Add(this.imgVela);
             this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.btnVolver);

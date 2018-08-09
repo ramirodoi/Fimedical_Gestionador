@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.dgHClinica = new System.Windows.Forms.DataGridView();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMedica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbTratamiento = new System.Windows.Forms.ComboBox();
             this.dpFecha = new System.Windows.Forms.DateTimePicker();
             this.cbMedica = new System.Windows.Forms.ComboBox();
@@ -53,6 +43,16 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.gbHistoriaClinica = new System.Windows.Forms.GroupBox();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMedica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgHClinica)).BeginInit();
             this.gbPaciente.SuspendLayout();
             this.gbHistoriaClinica.SuspendLayout();
@@ -74,19 +74,195 @@
             this.Pago,
             this.idMedioPago,
             this.MedioPago});
-            this.dgHClinica.Location = new System.Drawing.Point(13, 280);
-            this.dgHClinica.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgHClinica.Location = new System.Drawing.Point(16, 329);
+            this.dgHClinica.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.dgHClinica.Name = "dgHClinica";
             this.dgHClinica.ReadOnly = true;
-            this.dgHClinica.Size = new System.Drawing.Size(966, 468);
+            this.dgHClinica.Size = new System.Drawing.Size(1061, 562);
             this.dgHClinica.TabIndex = 0;
+            // 
+            // cbTratamiento
+            // 
+            this.cbTratamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTratamiento.FormattingEnabled = true;
+            this.cbTratamiento.Location = new System.Drawing.Point(156, 119);
+            this.cbTratamiento.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.cbTratamiento.Name = "cbTratamiento";
+            this.cbTratamiento.Size = new System.Drawing.Size(183, 28);
+            this.cbTratamiento.Sorted = true;
+            this.cbTratamiento.TabIndex = 1;
+            // 
+            // dpFecha
+            // 
+            this.dpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpFecha.Location = new System.Drawing.Point(155, 75);
+            this.dpFecha.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.dpFecha.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dpFecha.MinDate = new System.DateTime(2018, 7, 15, 0, 0, 0, 0);
+            this.dpFecha.Name = "dpFecha";
+            this.dpFecha.Size = new System.Drawing.Size(133, 26);
+            this.dpFecha.TabIndex = 2;
+            this.dpFecha.ValueChanged += new System.EventHandler(this.dpFechaTratamiento_ValueChanged);
+            // 
+            // cbMedica
+            // 
+            this.cbMedica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMedica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMedica.FormattingEnabled = true;
+            this.cbMedica.Location = new System.Drawing.Point(156, 33);
+            this.cbMedica.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.cbMedica.Name = "cbMedica";
+            this.cbMedica.Size = new System.Drawing.Size(304, 28);
+            this.cbMedica.TabIndex = 3;
+            // 
+            // lblNombreTratamiento
+            // 
+            this.lblNombreTratamiento.AutoSize = true;
+            this.lblNombreTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreTratamiento.Location = new System.Drawing.Point(45, 127);
+            this.lblNombreTratamiento.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNombreTratamiento.Name = "lblNombreTratamiento";
+            this.lblNombreTratamiento.Size = new System.Drawing.Size(98, 20);
+            this.lblNombreTratamiento.TabIndex = 8;
+            this.lblNombreTratamiento.Text = "Tratamiento:";
+            // 
+            // lblFechaTratamiento
+            // 
+            this.lblFechaTratamiento.AutoSize = true;
+            this.lblFechaTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaTratamiento.Location = new System.Drawing.Point(86, 81);
+            this.lblFechaTratamiento.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFechaTratamiento.Name = "lblFechaTratamiento";
+            this.lblFechaTratamiento.Size = new System.Drawing.Size(58, 20);
+            this.lblFechaTratamiento.TabIndex = 9;
+            this.lblFechaTratamiento.Text = "Fecha:";
+            // 
+            // lblNombreMedica
+            // 
+            this.lblNombreMedica.AutoSize = true;
+            this.lblNombreMedica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreMedica.Location = new System.Drawing.Point(80, 41);
+            this.lblNombreMedica.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNombreMedica.Name = "lblNombreMedica";
+            this.lblNombreMedica.Size = new System.Drawing.Size(64, 20);
+            this.lblNombreMedica.TabIndex = 10;
+            this.lblNombreMedica.Text = "Médica:";
+            // 
+            // lblPaciente
+            // 
+            this.lblPaciente.AutoSize = true;
+            this.lblPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaciente.Location = new System.Drawing.Point(74, 38);
+            this.lblPaciente.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblPaciente.Name = "lblPaciente";
+            this.lblPaciente.Size = new System.Drawing.Size(69, 20);
+            this.lblPaciente.TabIndex = 15;
+            this.lblPaciente.Text = "Nombre:";
+            // 
+            // cbPaciente
+            // 
+            this.cbPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPaciente.FormattingEnabled = true;
+            this.cbPaciente.Location = new System.Drawing.Point(155, 30);
+            this.cbPaciente.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.cbPaciente.Name = "cbPaciente";
+            this.cbPaciente.Size = new System.Drawing.Size(304, 28);
+            this.cbPaciente.Sorted = true;
+            this.cbPaciente.TabIndex = 14;
+            // 
+            // gbPaciente
+            // 
+            this.gbPaciente.Controls.Add(this.lblPaciente);
+            this.gbPaciente.Controls.Add(this.cbPaciente);
+            this.gbPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPaciente.Location = new System.Drawing.Point(16, 16);
+            this.gbPaciente.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.gbPaciente.Name = "gbPaciente";
+            this.gbPaciente.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.gbPaciente.Size = new System.Drawing.Size(514, 79);
+            this.gbPaciente.TabIndex = 17;
+            this.gbPaciente.TabStop = false;
+            this.gbPaciente.Text = "Paciente";
+            // 
+            // cbProducto
+            // 
+            this.cbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProducto.FormattingEnabled = true;
+            this.cbProducto.Location = new System.Drawing.Point(156, 161);
+            this.cbProducto.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.cbProducto.Name = "cbProducto";
+            this.cbProducto.Size = new System.Drawing.Size(183, 28);
+            this.cbProducto.Sorted = true;
+            this.cbProducto.TabIndex = 1;
+            // 
+            // lblNombreProducto
+            // 
+            this.lblNombreProducto.AutoSize = true;
+            this.lblNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreProducto.Location = new System.Drawing.Point(66, 169);
+            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNombreProducto.Name = "lblNombreProducto";
+            this.lblNombreProducto.Size = new System.Drawing.Size(77, 20);
+            this.lblNombreProducto.TabIndex = 8;
+            this.lblNombreProducto.Text = "Producto:";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(892, 905);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(185, 59);
+            this.btnVolver.TabIndex = 19;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.Location = new System.Drawing.Point(892, 256);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(185, 59);
+            this.btnConsultar.TabIndex = 20;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // gbHistoriaClinica
+            // 
+            this.gbHistoriaClinica.Controls.Add(this.cbTratamiento);
+            this.gbHistoriaClinica.Controls.Add(this.lblNombreMedica);
+            this.gbHistoriaClinica.Controls.Add(this.cbProducto);
+            this.gbHistoriaClinica.Controls.Add(this.cbMedica);
+            this.gbHistoriaClinica.Controls.Add(this.lblNombreTratamiento);
+            this.gbHistoriaClinica.Controls.Add(this.lblFechaTratamiento);
+            this.gbHistoriaClinica.Controls.Add(this.lblNombreProducto);
+            this.gbHistoriaClinica.Controls.Add(this.dpFecha);
+            this.gbHistoriaClinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbHistoriaClinica.Location = new System.Drawing.Point(16, 109);
+            this.gbHistoriaClinica.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.gbHistoriaClinica.Name = "gbHistoriaClinica";
+            this.gbHistoriaClinica.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.gbHistoriaClinica.Size = new System.Drawing.Size(514, 206);
+            this.gbHistoriaClinica.TabIndex = 18;
+            this.gbHistoriaClinica.TabStop = false;
+            this.gbHistoriaClinica.Text = "Historia Clínica";
             // 
             // Tipo
             // 
             this.Tipo.DataPropertyName = "Tipo";
+            this.Tipo.FillWeight = 110F;
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
+            this.Tipo.Width = 110;
             // 
             // idNombre
             // 
@@ -108,9 +284,11 @@
             // Fecha
             // 
             this.Fecha.DataPropertyName = "Fecha";
+            this.Fecha.FillWeight = 110F;
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 110;
             // 
             // idMedica
             // 
@@ -132,16 +310,20 @@
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
+            this.Precio.FillWeight = 110F;
             this.Precio.HeaderText = "Precio $";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
+            this.Precio.Width = 110;
             // 
             // Pago
             // 
             this.Pago.DataPropertyName = "Pago";
+            this.Pago.FillWeight = 110F;
             this.Pago.HeaderText = "Pago $";
             this.Pago.Name = "Pago";
             this.Pago.ReadOnly = true;
+            this.Pago.Width = 110;
             // 
             // idMedioPago
             // 
@@ -154,198 +336,23 @@
             // MedioPago
             // 
             this.MedioPago.DataPropertyName = "MedioPago";
-            this.MedioPago.FillWeight = 150F;
+            this.MedioPago.FillWeight = 170F;
             this.MedioPago.HeaderText = "Medio de Pago";
             this.MedioPago.Name = "MedioPago";
             this.MedioPago.ReadOnly = true;
-            this.MedioPago.Width = 150;
-            // 
-            // cbTratamiento
-            // 
-            this.cbTratamiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTratamiento.FormattingEnabled = true;
-            this.cbTratamiento.Location = new System.Drawing.Point(138, 99);
-            this.cbTratamiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbTratamiento.Name = "cbTratamiento";
-            this.cbTratamiento.Size = new System.Drawing.Size(150, 28);
-            this.cbTratamiento.Sorted = true;
-            this.cbTratamiento.TabIndex = 1;
-            // 
-            // dpFecha
-            // 
-            this.dpFecha.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpFecha.Location = new System.Drawing.Point(138, 63);
-            this.dpFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dpFecha.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
-            this.dpFecha.MinDate = new System.DateTime(2018, 7, 15, 0, 0, 0, 0);
-            this.dpFecha.Name = "dpFecha";
-            this.dpFecha.Size = new System.Drawing.Size(110, 26);
-            this.dpFecha.TabIndex = 2;
-            this.dpFecha.ValueChanged += new System.EventHandler(this.dpFechaTratamiento_ValueChanged);
-            // 
-            // cbMedica
-            // 
-            this.cbMedica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMedica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMedica.FormattingEnabled = true;
-            this.cbMedica.Location = new System.Drawing.Point(138, 25);
-            this.cbMedica.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbMedica.Name = "cbMedica";
-            this.cbMedica.Size = new System.Drawing.Size(250, 28);
-            this.cbMedica.TabIndex = 3;
-            // 
-            // lblNombreTratamiento
-            // 
-            this.lblNombreTratamiento.AutoSize = true;
-            this.lblNombreTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreTratamiento.Location = new System.Drawing.Point(32, 107);
-            this.lblNombreTratamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreTratamiento.Name = "lblNombreTratamiento";
-            this.lblNombreTratamiento.Size = new System.Drawing.Size(98, 20);
-            this.lblNombreTratamiento.TabIndex = 8;
-            this.lblNombreTratamiento.Text = "Tratamiento:";
-            // 
-            // lblFechaTratamiento
-            // 
-            this.lblFechaTratamiento.AutoSize = true;
-            this.lblFechaTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaTratamiento.Location = new System.Drawing.Point(72, 69);
-            this.lblFechaTratamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaTratamiento.Name = "lblFechaTratamiento";
-            this.lblFechaTratamiento.Size = new System.Drawing.Size(58, 20);
-            this.lblFechaTratamiento.TabIndex = 9;
-            this.lblFechaTratamiento.Text = "Fecha:";
-            // 
-            // lblNombreMedica
-            // 
-            this.lblNombreMedica.AutoSize = true;
-            this.lblNombreMedica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMedica.Location = new System.Drawing.Point(66, 33);
-            this.lblNombreMedica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreMedica.Name = "lblNombreMedica";
-            this.lblNombreMedica.Size = new System.Drawing.Size(64, 20);
-            this.lblNombreMedica.TabIndex = 10;
-            this.lblNombreMedica.Text = "Médica:";
-            // 
-            // lblPaciente
-            // 
-            this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaciente.Location = new System.Drawing.Point(61, 32);
-            this.lblPaciente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(69, 20);
-            this.lblPaciente.TabIndex = 15;
-            this.lblPaciente.Text = "Nombre:";
-            // 
-            // cbPaciente
-            // 
-            this.cbPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPaciente.FormattingEnabled = true;
-            this.cbPaciente.Location = new System.Drawing.Point(138, 24);
-            this.cbPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbPaciente.Name = "cbPaciente";
-            this.cbPaciente.Size = new System.Drawing.Size(250, 28);
-            this.cbPaciente.Sorted = true;
-            this.cbPaciente.TabIndex = 14;
-            // 
-            // gbPaciente
-            // 
-            this.gbPaciente.Controls.Add(this.lblPaciente);
-            this.gbPaciente.Controls.Add(this.cbPaciente);
-            this.gbPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPaciente.Location = new System.Drawing.Point(13, 14);
-            this.gbPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbPaciente.Name = "gbPaciente";
-            this.gbPaciente.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbPaciente.Size = new System.Drawing.Size(420, 66);
-            this.gbPaciente.TabIndex = 17;
-            this.gbPaciente.TabStop = false;
-            this.gbPaciente.Text = "Paciente";
-            // 
-            // cbProducto
-            // 
-            this.cbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbProducto.FormattingEnabled = true;
-            this.cbProducto.Location = new System.Drawing.Point(138, 137);
-            this.cbProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbProducto.Name = "cbProducto";
-            this.cbProducto.Size = new System.Drawing.Size(150, 28);
-            this.cbProducto.Sorted = true;
-            this.cbProducto.TabIndex = 1;
-            // 
-            // lblNombreProducto
-            // 
-            this.lblNombreProducto.AutoSize = true;
-            this.lblNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProducto.Location = new System.Drawing.Point(53, 145);
-            this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(77, 20);
-            this.lblNombreProducto.TabIndex = 8;
-            this.lblNombreProducto.Text = "Producto:";
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(829, 758);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(150, 50);
-            this.btnVolver.TabIndex = 19;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(829, 220);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(150, 50);
-            this.btnConsultar.TabIndex = 20;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // gbHistoriaClinica
-            // 
-            this.gbHistoriaClinica.Controls.Add(this.cbTratamiento);
-            this.gbHistoriaClinica.Controls.Add(this.lblNombreMedica);
-            this.gbHistoriaClinica.Controls.Add(this.cbProducto);
-            this.gbHistoriaClinica.Controls.Add(this.cbMedica);
-            this.gbHistoriaClinica.Controls.Add(this.lblNombreTratamiento);
-            this.gbHistoriaClinica.Controls.Add(this.lblFechaTratamiento);
-            this.gbHistoriaClinica.Controls.Add(this.lblNombreProducto);
-            this.gbHistoriaClinica.Controls.Add(this.dpFecha);
-            this.gbHistoriaClinica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbHistoriaClinica.Location = new System.Drawing.Point(13, 90);
-            this.gbHistoriaClinica.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbHistoriaClinica.Name = "gbHistoriaClinica";
-            this.gbHistoriaClinica.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbHistoriaClinica.Size = new System.Drawing.Size(420, 180);
-            this.gbHistoriaClinica.TabIndex = 18;
-            this.gbHistoriaClinica.TabStop = false;
-            this.gbHistoriaClinica.Text = "Historia Clínica";
+            this.MedioPago.Width = 170;
             // 
             // HistoriaClinica_Consulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 822);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1092, 972);
             this.Controls.Add(this.gbHistoriaClinica);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.gbPaciente);
             this.Controls.Add(this.dgHClinica);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Millimeter, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "HistoriaClinica_Consulta";
             this.Text = "HistoriaClinica_Alta";
             ((System.ComponentModel.ISupportInitialize)(this.dgHClinica)).EndInit();
