@@ -176,7 +176,7 @@
             this.cbTratamiento.Location = new System.Drawing.Point(143, 33);
             this.cbTratamiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTratamiento.Name = "cbTratamiento";
-            this.cbTratamiento.Size = new System.Drawing.Size(200, 33);
+            this.cbTratamiento.Size = new System.Drawing.Size(200, 28);
             this.cbTratamiento.Sorted = true;
             this.cbTratamiento.TabIndex = 1;
             // 
@@ -190,7 +190,7 @@
             this.dpFechaTratamiento.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dpFechaTratamiento.MinDate = new System.DateTime(2018, 7, 15, 0, 0, 0, 0);
             this.dpFechaTratamiento.Name = "dpFechaTratamiento";
-            this.dpFechaTratamiento.Size = new System.Drawing.Size(110, 30);
+            this.dpFechaTratamiento.Size = new System.Drawing.Size(110, 26);
             this.dpFechaTratamiento.TabIndex = 2;
             // 
             // cbMedica
@@ -201,7 +201,7 @@
             this.cbMedica.Location = new System.Drawing.Point(143, 107);
             this.cbMedica.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbMedica.Name = "cbMedica";
-            this.cbMedica.Size = new System.Drawing.Size(250, 33);
+            this.cbMedica.Size = new System.Drawing.Size(250, 28);
             this.cbMedica.TabIndex = 3;
             // 
             // txtPrecioTratamiento
@@ -210,7 +210,7 @@
             this.txtPrecioTratamiento.Location = new System.Drawing.Point(143, 145);
             this.txtPrecioTratamiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecioTratamiento.Name = "txtPrecioTratamiento";
-            this.txtPrecioTratamiento.Size = new System.Drawing.Size(100, 30);
+            this.txtPrecioTratamiento.Size = new System.Drawing.Size(100, 26);
             this.txtPrecioTratamiento.TabIndex = 4;
             this.txtPrecioTratamiento.TextChanged += new System.EventHandler(this.txtPrecioTratamiento_TextChanged);
             // 
@@ -220,7 +220,7 @@
             this.txtPagoTratamiento.Location = new System.Drawing.Point(326, 145);
             this.txtPagoTratamiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPagoTratamiento.Name = "txtPagoTratamiento";
-            this.txtPagoTratamiento.Size = new System.Drawing.Size(100, 30);
+            this.txtPagoTratamiento.Size = new System.Drawing.Size(100, 26);
             this.txtPagoTratamiento.TabIndex = 5;
             this.txtPagoTratamiento.TextChanged += new System.EventHandler(this.txtPagoTratamiento_TextChanged);
             // 
@@ -232,7 +232,7 @@
             this.cbMedioPagoTratamiento.Location = new System.Drawing.Point(143, 181);
             this.cbMedioPagoTratamiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbMedioPagoTratamiento.Name = "cbMedioPagoTratamiento";
-            this.cbMedioPagoTratamiento.Size = new System.Drawing.Size(200, 33);
+            this.cbMedioPagoTratamiento.Size = new System.Drawing.Size(200, 28);
             this.cbMedioPagoTratamiento.TabIndex = 6;
             // 
             // btnAgregarTratamiento
@@ -254,7 +254,7 @@
             this.lblNombreTratamiento.Location = new System.Drawing.Point(66, 41);
             this.lblNombreTratamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreTratamiento.Name = "lblNombreTratamiento";
-            this.lblNombreTratamiento.Size = new System.Drawing.Size(87, 25);
+            this.lblNombreTratamiento.Size = new System.Drawing.Size(69, 20);
             this.lblNombreTratamiento.TabIndex = 8;
             this.lblNombreTratamiento.Text = "Nombre:";
             // 
@@ -265,7 +265,7 @@
             this.lblFechaTratamiento.Location = new System.Drawing.Point(77, 77);
             this.lblFechaTratamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaTratamiento.Name = "lblFechaTratamiento";
-            this.lblFechaTratamiento.Size = new System.Drawing.Size(73, 25);
+            this.lblFechaTratamiento.Size = new System.Drawing.Size(58, 20);
             this.lblFechaTratamiento.TabIndex = 9;
             this.lblFechaTratamiento.Text = "Fecha:";
             // 
@@ -276,7 +276,7 @@
             this.lblMedica.Location = new System.Drawing.Point(71, 115);
             this.lblMedica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedica.Name = "lblMedica";
-            this.lblMedica.Size = new System.Drawing.Size(82, 25);
+            this.lblMedica.Size = new System.Drawing.Size(64, 20);
             this.lblMedica.TabIndex = 10;
             this.lblMedica.Text = "Médica:";
             // 
@@ -287,7 +287,7 @@
             this.lblPrecioTratamiento.Location = new System.Drawing.Point(65, 151);
             this.lblPrecioTratamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecioTratamiento.Name = "lblPrecioTratamiento";
-            this.lblPrecioTratamiento.Size = new System.Drawing.Size(89, 25);
+            this.lblPrecioTratamiento.Size = new System.Drawing.Size(70, 20);
             this.lblPrecioTratamiento.TabIndex = 11;
             this.lblPrecioTratamiento.Text = "Precio $:";
             // 
@@ -298,7 +298,7 @@
             this.lblPagoTratamiento.Location = new System.Drawing.Point(255, 151);
             this.lblPagoTratamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPagoTratamiento.Name = "lblPagoTratamiento";
-            this.lblPagoTratamiento.Size = new System.Drawing.Size(80, 25);
+            this.lblPagoTratamiento.Size = new System.Drawing.Size(63, 20);
             this.lblPagoTratamiento.TabIndex = 12;
             this.lblPagoTratamiento.Text = "Pago $:";
             // 
@@ -309,7 +309,7 @@
             this.lblMedioPagoTratamiento.Location = new System.Drawing.Point(16, 189);
             this.lblMedioPagoTratamiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedioPagoTratamiento.Name = "lblMedioPagoTratamiento";
-            this.lblMedioPagoTratamiento.Size = new System.Drawing.Size(150, 25);
+            this.lblMedioPagoTratamiento.Size = new System.Drawing.Size(119, 20);
             this.lblMedioPagoTratamiento.TabIndex = 13;
             this.lblMedioPagoTratamiento.Text = "Medio de Pago:";
             // 
@@ -320,7 +320,7 @@
             this.lblPaciente.Location = new System.Drawing.Point(67, 32);
             this.lblPaciente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(87, 25);
+            this.lblPaciente.Size = new System.Drawing.Size(69, 20);
             this.lblPaciente.TabIndex = 15;
             this.lblPaciente.Text = "Nombre:";
             // 
@@ -329,10 +329,10 @@
             this.cbPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPaciente.FormattingEnabled = true;
-            this.cbPaciente.Location = new System.Drawing.Point(177, 22);
+            this.cbPaciente.Location = new System.Drawing.Point(177, 24);
             this.cbPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPaciente.Name = "cbPaciente";
-            this.cbPaciente.Size = new System.Drawing.Size(250, 33);
+            this.cbPaciente.Size = new System.Drawing.Size(250, 28);
             this.cbPaciente.Sorted = true;
             this.cbPaciente.TabIndex = 14;
             // 
@@ -406,7 +406,7 @@
             this.cbProducto.Location = new System.Drawing.Point(161, 33);
             this.cbProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbProducto.Name = "cbProducto";
-            this.cbProducto.Size = new System.Drawing.Size(200, 33);
+            this.cbProducto.Size = new System.Drawing.Size(200, 28);
             this.cbProducto.Sorted = true;
             this.cbProducto.TabIndex = 1;
             // 
@@ -420,7 +420,7 @@
             this.dpFechaProducto.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dpFechaProducto.MinDate = new System.DateTime(2018, 7, 15, 0, 0, 0, 0);
             this.dpFechaProducto.Name = "dpFechaProducto";
-            this.dpFechaProducto.Size = new System.Drawing.Size(110, 30);
+            this.dpFechaProducto.Size = new System.Drawing.Size(110, 26);
             this.dpFechaProducto.TabIndex = 2;
             // 
             // label1
@@ -430,7 +430,7 @@
             this.label1.Location = new System.Drawing.Point(34, 184);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Medio de Pago:";
             // 
@@ -440,7 +440,7 @@
             this.txtPrecioProducto.Location = new System.Drawing.Point(161, 140);
             this.txtPrecioProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
-            this.txtPrecioProducto.Size = new System.Drawing.Size(100, 30);
+            this.txtPrecioProducto.Size = new System.Drawing.Size(100, 26);
             this.txtPrecioProducto.TabIndex = 4;
             this.txtPrecioProducto.TextChanged += new System.EventHandler(this.txtPrecioProducto_TextChanged);
             // 
@@ -451,7 +451,7 @@
             this.label2.Location = new System.Drawing.Point(270, 143);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 25);
+            this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 12;
             this.label2.Text = "Pago $:";
             // 
@@ -461,7 +461,7 @@
             this.txtPagoProducto.Location = new System.Drawing.Point(341, 137);
             this.txtPagoProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPagoProducto.Name = "txtPagoProducto";
-            this.txtPagoProducto.Size = new System.Drawing.Size(100, 30);
+            this.txtPagoProducto.Size = new System.Drawing.Size(100, 26);
             this.txtPagoProducto.TabIndex = 5;
             this.txtPagoProducto.TextChanged += new System.EventHandler(this.txtPagoProducto_TextChanged);
             // 
@@ -472,7 +472,7 @@
             this.label3.Location = new System.Drawing.Point(83, 146);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 25);
+            this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Precio $:";
             // 
@@ -484,7 +484,7 @@
             this.cbMedioPagoProducto.Location = new System.Drawing.Point(161, 176);
             this.cbMedioPagoProducto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbMedioPagoProducto.Name = "cbMedioPagoProducto";
-            this.cbMedioPagoProducto.Size = new System.Drawing.Size(200, 33);
+            this.cbMedioPagoProducto.Size = new System.Drawing.Size(200, 28);
             this.cbMedioPagoProducto.TabIndex = 6;
             // 
             // btnAgregarProducto
@@ -506,7 +506,7 @@
             this.lblFechaProducto.Location = new System.Drawing.Point(95, 77);
             this.lblFechaProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaProducto.Name = "lblFechaProducto";
-            this.lblFechaProducto.Size = new System.Drawing.Size(73, 25);
+            this.lblFechaProducto.Size = new System.Drawing.Size(58, 20);
             this.lblFechaProducto.TabIndex = 9;
             this.lblFechaProducto.Text = "Fecha:";
             // 
@@ -517,7 +517,7 @@
             this.lblNombreProducto.Location = new System.Drawing.Point(84, 41);
             this.lblNombreProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreProducto.Name = "lblNombreProducto";
-            this.lblNombreProducto.Size = new System.Drawing.Size(87, 25);
+            this.lblNombreProducto.Size = new System.Drawing.Size(69, 20);
             this.lblNombreProducto.TabIndex = 8;
             this.lblNombreProducto.Text = "Nombre:";
             // 
@@ -547,7 +547,10 @@
             // 
             // HistoriaClinica_Alta
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(992, 822);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGuardar);
